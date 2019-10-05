@@ -6,9 +6,14 @@ public class RamassableBehavior : MonoBehaviour
 {
 	public GameObject ButtonWindow;
 
+	public ItemType item;
+	public int quantity;
+
 	Collider2D collider;
 	Collider2D playerCollider;
 	bool isTouching;
+
+
 	// Start is called before the first frame update
 	void Start()
     {
