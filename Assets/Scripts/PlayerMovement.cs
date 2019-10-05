@@ -6,9 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
 	Vector2 direction;
+	MovingEntity movingEntity;
 	// Start is called before the first frame update
 	void Start()
 	{
+		movingEntity = GetComponent<MovingEntity>();
 	}
 
 	// Update is called once per frame
@@ -32,6 +34,6 @@ public class PlayerMovement : MonoBehaviour
 			direction.x -= 1;
 		}
 
-		GetComponent<MovingEntity>().Move(direction);
+		movingEntity.Move(direction);
 	}
 }
