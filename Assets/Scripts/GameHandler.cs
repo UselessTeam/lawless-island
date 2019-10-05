@@ -1,27 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameHandler : MonoBehaviour
+public class GameHandler : Singleton<GameHandler>
 {
-    public static GameHandler instance;
-
 	public GameObject player;
-
-	// Start is called before the first frame update
-	void Awake()
-	{
-		instance = this;
-	}
-
-    void Start()
-	{
-
-	}
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
