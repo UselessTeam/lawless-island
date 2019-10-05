@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
 	Vector2 direction;
 	MovingEntity movingEntity;
+
+	public Vector2 facingDirection;
+	float timeSinceDiagonal = -10;
+	float switchTime = 0.07F;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -34,6 +37,17 @@ public class PlayerMovement : MonoBehaviour
 			direction.x -= 1;
 		}
 
-		movingEntity.Move(direction);
+		if (direction.magnitude > 1)
+		{
+			timeSinceDiagonal = Time.fixedTime;
+			facingDirection = direction;
+		}
+        else if (direction.magnitude == 1 && Time.fixedTime - timeSinceDiagonal > switchTime)
+		{
+			facingDirection = direction;
+		}
+
+		movingEntity.SetDirection(direction);
+
 	}
 }
