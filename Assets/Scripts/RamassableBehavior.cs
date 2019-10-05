@@ -19,13 +19,6 @@ public class RamassableBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-		ContactPoint2D[]  cols = new ContactPoint2D[16];
-		collider.GetContacts(cols);
-        foreach (ContactPoint2D col in cols)
-        {
-            if (col.rigidbody)
-                print(col.rigidbody.gameObject.name);
-		}
 		if (!isTouching && collider.IsTouching(playerCollider))
 		{
 			isTouching = true;
