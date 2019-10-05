@@ -6,10 +6,12 @@ public class EnnemiBehavior : MonoBehaviour
 {
     public float VisionRange;
 	Transform playerTransform;
+	MovingEntity movingEntity;
 	// Start is called before the first frame update
 	void Start()
     {
 		playerTransform = GameHandler.instance.player.transform;
+		movingEntity = GetComponent<MovingEntity>();
 	}
 
     // Update is called once per frame
@@ -17,8 +19,8 @@ public class EnnemiBehavior : MonoBehaviour
     {
 		if ((playerTransform.position - transform.position).magnitude < VisionRange)
 		{
-			GetComponent<MovingEntity>().Move(
-								(playerTransform.position - transform.position).normalized);
+			movingEntity.Move(
+                (playerTransform.position - transform.position).normalized);
 
 		}
 	}

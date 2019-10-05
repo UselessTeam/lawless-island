@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7183770490102614739}
   - component: {fileID: 7183770490102614738}
   - component: {fileID: 7183770490102614737}
-  - component: {fileID: 7183770490102614736}
+  - component: {fileID: 290739560}
+  - component: {fileID: 290739556}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Untagged
@@ -94,8 +95,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9446999119b22642af347aba38d0f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisionRange: 1000
---- !u!114 &7183770490102614736
+  VisionRange: 8
+--- !u!58 &290739560
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183770490102614743}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.06
+--- !u!114 &290739556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +121,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7183770490102614743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306c854d98d00ad45965a39aa3284d27, type: 3}
+  m_Script: {fileID: 11500000, guid: 5897fa1ad06fcd34f83fd586bd6592b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
+  Speed: 3
+  Ammortisesment: 0.5
+  Acceleration: 100
