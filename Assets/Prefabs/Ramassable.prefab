@@ -134,6 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonWindow: {fileID: 4947882406675897799}
+  item: 0
+  amount: 2
 --- !u!1 &4947882406675897799
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,11 +11,13 @@ public enum ItemType : int
 
 public class InventoryHandler : Singleton<InventoryHandler>
 {
-	int[] Quantities;
+	int[] Amounts;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		int a = System.Enum.GetNames(typeof(ItemType)).Length;
+		Amounts = new int [a];
 	}
 
 	// Update is called once per frame
@@ -23,26 +25,26 @@ public class InventoryHandler : Singleton<InventoryHandler>
     {
     }
 
-	void Add(ItemType type, int q)
+	public void Add(ItemType type, int q)
 	{
-		Quantities[(int)type] += q;
+		Amounts[(int)type] += q;
 	}
 
-	void Remove(ItemType type, int q)
+	public void Remove(ItemType type, int q)
 	{
-		Quantities[(int)type] -= q;
-        if (Quantities[(int)type]<0)
+		Amounts[(int)type] -= q;
+        if (Amounts[(int)type]<0)
 			Debug.LogError("Quantite negative!");
 	}
 
-	bool IsEnough(ItemType type, int q)
+	public bool IsEnough(ItemType type, int q)
 	{
-        return Quantities[(int)type] >= q;
+        return Amounts[(int)type] >= q;
 	}
 
-	int getQuantity(ItemType type)
+	public int getQuantity(ItemType type)
 	{
-		return Quantities[(int)type];
+		return Amounts[(int)type];
 	}
 
 }
