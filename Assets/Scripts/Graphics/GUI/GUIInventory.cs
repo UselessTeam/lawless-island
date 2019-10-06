@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace Graphics.GUI {
     internal class GUIInventory : MonoBehaviour {

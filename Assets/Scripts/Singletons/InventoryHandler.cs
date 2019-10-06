@@ -1,19 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-public enum ItemType : int
-{
-	Wood,
-	Mushroom,
-	AutreObjetPhallique
-}
-
-[Serializable]
-public struct ItemAmount{
-	public ItemType type;
-	public int amount;
-}
-
 public class InventoryHandler : Singleton<InventoryHandler>
 {
 	int[] amounts;
@@ -38,13 +25,20 @@ public class InventoryHandler : Singleton<InventoryHandler>
 			callback.Invoke();
 		}
 	}
-	public void Add(ItemAmount item)
+	public void Add(ItemStack item)
 	{
 		Add(item.type, item.amount);
 	}
-	public void Add(ItemAmount[] items)
+	public void Add(ItemStack[] items)
 	{
-		foreach (ItemAmount item in items)
+		foreach (ItemStack item in items)
+		{
+			Add(item);
+		}
+	}
+	public void Add(ItemList items)
+	{
+		foreach (ItemStack item in items.ToArray())
 		{
 			Add(item);
 		}
@@ -59,13 +53,20 @@ public class InventoryHandler : Singleton<InventoryHandler>
 			callback.Invoke();
 		}
 	}
-	public void Remove(ItemAmount item)
+	public void Remove(ItemStack item)
 	{
 		Remove(item.type, item.amount);
 	}
-	public void Remove(ItemAmount[] items)
+	public void Remove(ItemStack[] items)
 	{
-		foreach (ItemAmount item in items)
+		foreach (ItemStack item in items)
+		{
+			Remove(item);
+		}
+	}
+	public void Remove(ItemList items)
+	{
+		foreach (ItemStack item in items.ToArray())
 		{
 			Remove(item);
 		}
@@ -75,13 +76,22 @@ public class InventoryHandler : Singleton<InventoryHandler>
 	{
         return amounts[(int)type] >= q;
 	}
-    public bool IsEnough(ItemAmount item)
+    public bool IsEnough(ItemStack item)
 	{
 		return IsEnough(item.type, item.amount);
 	}
-	public bool IsEnough(ItemAmount[] items)
+	public bool IsEnough(ItemStack[] items)
 	{
-		foreach (ItemAmount item in items)
+		foreach (ItemStack item in items)
+		{
+			if (!IsEnough(item))
+				return false;
+		}
+		return true;
+	}
+	public bool IsEnough(ItemList items)
+	{
+		foreach (ItemStack item in items.ToArray())
 		{
 			if (!IsEnough(item))
 				return false;

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878a8dee93a25256e8d4d0ce9a01773e, type: 3}
+  m_Name: BuyBetterStick
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -68751727340038015, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  name: Better Stick
+  description: Having a better stick is better than having just a stick
+  costForInspector:
+  - type: 1
+    amount: 5
+  - type: 2
+    amount: 4
+  - type: 0
+    amount: 1
+  onSelected: {fileID: 0}

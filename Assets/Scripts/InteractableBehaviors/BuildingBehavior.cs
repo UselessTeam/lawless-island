@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BuildingBehavior : Interactable
 {
-	public ItemAmount[] buildingRequirement;
+	public ItemList buildingRequirement;
 	public struct Transaction
 	{
-		public ItemAmount[] price;
-		public ItemAmount product;
+		public ItemList price;
+		public ItemStack product;
 	}
     public List<Transaction> transactions;
 

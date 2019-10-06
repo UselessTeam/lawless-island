@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Graphics.GUI {
-    public class GUIInventoryItem : MonoBehaviour{
+    internal class GUIInventoryItem : MonoBehaviour{
 
         [SerializeField]
         internal SpriteRenderer sprite = null;
