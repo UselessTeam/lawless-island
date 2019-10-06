@@ -64,4 +64,10 @@ public class MovingEntity : MonoBehaviour
 	{
 		this.direction = direction;
 	}
+
+	public bool IsTakingHit()
+	{
+		return isTakingHit;
+	}
+
 }

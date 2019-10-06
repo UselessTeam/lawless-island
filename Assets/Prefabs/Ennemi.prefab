@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7183770490102614743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.44, y: 1.51, z: -2.5364397}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,7 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9446999119b22642af347aba38d0f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisionRange: 8
+  VisionRange: 10
+  hp: 20
+  damage: 1
 --- !u!58 &290739560
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +130,5 @@ MonoBehaviour:
   Speed: 3
   Ammortisesment: 0.5
   Acceleration: 100
+  takeHitTime: 0.3
+  takeHitSpeed: 20
