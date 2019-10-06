@@ -129,9 +129,13 @@ namespace Graphics.GUI {
 
         void Activate() {
             if(selected.associatedOption.onSelected != null) {
-                selected.associatedOption.onSelected.Activate(selected.associatedOption);
+                if (InventoryHandler.instance.IsEnough(selected.associatedOption.cost))
+                {
+                    InventoryHandler.instance.Remove(selected.associatedOption.cost);
+                    selected.associatedOption.onSelected.Activate(selected.associatedOption);
+                    GameHandler.instance.CloseGui();
+                }
             }
-			GameHandler.instance.CloseGui();
 		}
     }
 }

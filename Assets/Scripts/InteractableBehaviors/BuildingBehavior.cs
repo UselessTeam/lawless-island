@@ -5,15 +5,12 @@ using UnityEngine;
 public class BuildingBehavior : Interactable
 {
 	public SelectableOption buildingRequirement;
-
     public SelectableOption[] transactions;
 
 	public GameObject Built;
 	public GameObject Unbuilt;
 
 	public bool isBuilt = false;
-
-
 
 	// Start is called before the first frame update
 	void Start()
@@ -32,7 +29,8 @@ public class BuildingBehavior : Interactable
 		var panel = GameHandler.instance.OpenGui();
 		if (!isBuilt)
         {
-			panel.Display(new SelectableOption[] { buildingRequirement });
+            buildingRequirement.parameter.building = this;
+            panel.Display(new SelectableOption[] { buildingRequirement });
 		}else
 		{
 			panel.Display(transactions);

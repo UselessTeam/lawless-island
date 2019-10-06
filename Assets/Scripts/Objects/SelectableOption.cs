@@ -32,7 +32,7 @@ public struct Parameter
     public BuildingBehavior building;
 }
 
-public abstract class IActionable : MonoBehaviour{
-
+public abstract class IActionable : MonoBehaviour
+{
     public abstract void Activate(SelectableOption option);
 }
