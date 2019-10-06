@@ -4,16 +4,61 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6761164967045977113
-    second: items_0
+    second: item_stick
   - first:
       213: 5508725064705088119
-    second: items_1
+    second: item_wood
   - first:
       213: -68751727340038015
-    second: items_2
+    second: item_flower
   - first:
       213: 6099581493293703690
-    second: items_3
+    second: item_herb
+  - first:
+      213: -5428206428529569624
+    second: item_stone
+  - first:
+      213: -7833671090200325546
+    second: item_ore
+  - first:
+      213: 5860025163644826426
+    second: item_metal
+  - first:
+      213: -7583409310137716746
+    second: item_coal
+  - first:
+      213: 980155311395259703
+    second: item_mushroom
+  - first:
+      213: -732356172534689064
+    second: item_berry
+  - first:
+      213: 8132948862792318974
+    second: item_pinch
+  - first:
+      213: 2614870373251885436
+    second: item_fish
+  - first:
+      213: -2693009140137883590
+    second: item_sword
+  - first:
+      213: -956252262595852801
+    second: item_harpoon
+  - first:
+      213: 6738218706411903907
+    second: item_axe
+  - first:
+      213: -6338023803479276477
+    second: item_pickaxe
+  - first:
+      213: 6395214293025444372
+    second: icon_food
+  - first:
+      213: -4538752222985096420
+    second: icon_human
+  - first:
+      213: 4533227004153260592
+    second: icon_sleep
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +167,343 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: items_0
+      name: item_stick
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf1abc836e72cdd68130b41f07af952
+      internalID: 6761164967045977113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_wood
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b648974b33b77bc9c16d226d069aaf
+      internalID: 5508725064705088119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_flower
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164cb20a345a3aec7b4750c51b00b1de
+      internalID: -68751727340038015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_herb
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9dde31c3fe7b0c19f9467b40f1f428
+      internalID: 6099581493293703690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_stone
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de021ff200d3a0809d4aa31e97c7e9e
+      internalID: -5428206428529569624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_ore
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 36
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e82ce688fbd1581fa1d4d95c7638de8
+      internalID: -7833671090200325546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_metal
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 36
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c949961840c8ff6b9e82009945c0f4
+      internalID: 5860025163644826426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_coal
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43737b28fe3808d10b8b6aa516783277
+      internalID: -7583409310137716746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_mushroom
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620161c40bd70955a88289a37b8bbe15
+      internalID: 980155311395259703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_berry
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 24
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85008da1709b2b76af380080d10a2c8
+      internalID: -732356172534689064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_pinch
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9db2120fd64a60d819697ceec2e6b1
+      internalID: 8132948862792318974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_fish
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 24
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600f7f4658ad911429736723ee465185
+      internalID: 2614870373251885436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_sword
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28d9b38a27fbfc008f96bf8c08a77c7
+      internalID: -2693009140137883590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_harpoon
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02752413584b3d2e08976a9d0bd90581
+      internalID: -956252262595852801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_axe
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 12
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2388b35aed0844c83c60ea16677223
+      internalID: 6738218706411903907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_pickaxe
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 12
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4334849eeb47a088202f2994aff6b9
+      internalID: -6338023803479276477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon_food
       rect:
         serializedVersion: 2
         x: 0
@@ -130,20 +511,20 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c080c2418aa9d7b8a05a8477db7a3c
-      internalID: 6761164967045977113
+      spriteID: 23ba8dac677c4f5628b64176b986d438
+      internalID: 6395214293025444372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_1
+      name: icon_human
       rect:
         serializedVersion: 2
         x: 12
@@ -151,20 +532,20 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4983afa6ae41d70589e4476f9ca6f99
-      internalID: 5508725064705088119
+      spriteID: bf2c3cc826b6fcf42a1534b8129f2a36
+      internalID: -4538752222985096420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_2
+      name: icon_sleep
       rect:
         serializedVersion: 2
         x: 24
@@ -172,35 +553,14 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61facaa2b907587afa9a9c7ed93777bc
-      internalID: -68751727340038015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: items_3
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af1ace48458116806ac4f42a96824d2d
-      internalID: 6099581493293703690
+      spriteID: 4bb34e1f19ac445ca9b5d14594bc2002
+      internalID: 4533227004153260592
       vertices: []
       indices: 
       edges: []
