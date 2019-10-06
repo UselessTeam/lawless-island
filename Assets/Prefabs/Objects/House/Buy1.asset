@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: Buy1
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  name: Cooked mushrooms
-  description: Smells good!
+  name: Create Human
+  description: 
   costForInspector:
   - type: 1
     amount: 2
-  onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
+  - type: 6
+    amount: 1
+  - type: 0
+    amount: 40
+  onSelected: {fileID: 7120558090418322905, guid: 79591176a1161cb46ad70b05748f448c,
     type: 3}
   createdItem:
-    type: 0
-    amount: 10
+    type: 1
+    amount: 0

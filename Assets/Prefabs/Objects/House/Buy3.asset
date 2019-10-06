@@ -16,10 +16,10 @@ MonoBehaviour:
   name: Torch
   description: To light up your lonely nights
   costForInspector:
-  - type: 1
-    amount: 1
-  onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
+  - type: 0
+    amount: 5
+  onSelected: {fileID: 5592958428134987898, guid: d3016d5bbe2c42f4d88c4955dd6d7f91,
     type: 3}
   createdItem:
-    type: 7
-    amount: 1
+    type: 0
+    amount: 0

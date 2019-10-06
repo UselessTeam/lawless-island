@@ -9,6 +9,7 @@ public static class ItemData {
 
 public enum ItemType {
     Food,
+    Humans,
     Stick,
     Stone,
     Mushroom,

@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Buy2
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  name: Roasted Crab
-  description: A delicacy!
-  costForInspector:
-  - type: 4
-    amount: 1
-  onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
+  name: Change Character
+  description: 
+  costForInspector: []
+  onSelected: {fileID: 7489666402545855023, guid: 825bcb240e8c31d4d9e74f73147bb9f7,
     type: 3}
   createdItem:
     type: 0
-    amount: 15
+    amount: 0
