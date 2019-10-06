@@ -14,8 +14,9 @@ public class InventoryHandler : Singleton<InventoryHandler>
 	public Action callback;
 	public static int inventoryItemTypeSize = System.Enum.GetNames(typeof(ItemType)).Length;
 
-	void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		amounts = new int [inventoryItemTypeSize];
 	}
 
