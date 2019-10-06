@@ -25,5 +25,5 @@ public class SelectableOption : ScriptableObject {
 
 public abstract class IActionable : MonoBehaviour{
 
-    public abstract void Activate();
+    public abstract void Activate(SelectableOption option);
 }

@@ -17,13 +17,22 @@ namespace Graphics.GUI {
         private GameObject selectablePrefab = null;
 
         internal int width, height;
-        internal List<GUISelectable> selectables = new List<GUISelectable>();
+        internal List<GUISelectable> selectables = null;
+
+        private GUISelectable selected = null;
 
         public Text flavorText = null;
         public SelectableOption[] debugOptions = new SelectableOption[0];
 
         void Start() {
             Display(debugOptions);
+        }
+
+        public void Clean() {
+            foreach(GUISelectable selectable in selectables) {
+                Destroy(selectable.gameObject);
+            }
+            selectables = null;
         }
 
         public void Display(ICollection<SelectableOption> selectableOptions) {
@@ -38,6 +47,10 @@ namespace Graphics.GUI {
 
         private void InternalDisplay(IEnumerable<SelectableOption> selectableOptions) {
             int x = 0;
+            if(selectables != null) {
+                Clean();
+            }
+            selectables = new List<GUISelectable>();
             foreach (SelectableOption option in selectableOptions) {
                 GameObject selectableGameObject = Instantiate(selectablePrefab, subpanel);
                 RectTransform rect = (RectTransform)selectableGameObject.transform;
@@ -53,9 +66,8 @@ namespace Graphics.GUI {
                 selectables.Add(selectable);
                 x++;
             }
-            if(x > 0) {
-                Select(selectables[0]);
-            }
+            selector.gameObject.SetActive(false);
+            xMin = 0; xMax = -1; y = 0;
         }
 
         void Update() {
@@ -73,6 +85,9 @@ namespace Graphics.GUI {
             }
             if (targetX != null || targetY != null) {
                 Reposition();
+            }
+            if (Input.GetButtonDown("Action")) {
+                Activate();
             }
         }
 
@@ -106,9 +121,18 @@ namespace Graphics.GUI {
         }
 
         void Select(GUISelectable selectable) {
+            selector.gameObject.SetActive(true);
+            selected = selectable;
             cost.Display(selectable.associatedOption.cost);
             flavorText.text = selectable.associatedOption.description;
             selector.Select((RectTransform)selectable.transform);
+        }
+
+        void Activate() {
+            if(selected.associatedOption.onSelected != null) {
+                selected.associatedOption.onSelected.Activate(selected.associatedOption);
+            }
+            Debug.Log("TODO : Tell GameHandler to close GUI");
         }
     }
 }
