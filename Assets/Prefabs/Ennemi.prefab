@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9446999119b22642af347aba38d0f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisionRange: 10
   hp: 20
-  damage: 1
+  damage: 7
+  VisionRange: 10
 --- !u!58 &290739560
 CircleCollider2D:
   m_ObjectHideFlags: 0

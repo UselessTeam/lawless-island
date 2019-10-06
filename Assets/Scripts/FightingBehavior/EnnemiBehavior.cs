@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemiBehavior : MonoBehaviour
+public class EnnemiBehavior : FightingBehavior
 {
     public float VisionRange;
-	public int hp = 20;
-	public int damage = 1;
 
 	Transform playerTransform;
 	Collider2D playerCollider;
+
+	PlayerBehavior playerBehavior;
+	Collider2D attackCollider;
 
 	MovingEntity movingEntity;
 	Collider2D myCollider;
@@ -19,21 +20,27 @@ public class EnnemiBehavior : MonoBehaviour
     {
 		playerTransform = GameHandler.instance.player.transform;
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
+		playerBehavior = GameHandler.instance.player.GetComponent<PlayerBehavior>();
+		attackCollider = playerBehavior.attackObject.GetComponent<Collider2D>();
 		movingEntity = GetComponent<MovingEntity>();
 		myCollider = GetComponent<Collider2D>();
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update()
+	{
+		FightingUpdate();
 		Vector2 toPlayer = (Vector2)(playerTransform.position - transform.position);
 		if (toPlayer.magnitude < VisionRange)
 		{
 			movingEntity.SetDirection(toPlayer.normalized);
 
 		}
-
-		if (myCollider.IsTouching(playerCollider))
+		if (!IsFlickering() && myCollider.IsTouching(attackCollider))
+		{
+			HitSelf(playerBehavior.GetAttackDirection());
+		}
+		else if (IsCanAttack() && myCollider.IsTouching(playerCollider))
 		{
 			HitPlayer(toPlayer);
 		}
@@ -42,5 +49,17 @@ public class EnnemiBehavior : MonoBehaviour
 	void HitPlayer(Vector2 toPlayer)
     {
 		playerTransform.GetComponent<MovingEntity>().TakeHit(toPlayer.normalized);
+		playerBehavior.TakeDamage(damage);
 	}
+	void HitSelf(Vector2 direction)
+	{
+		GetComponent<MovingEntity>().TakeHit(direction);
+		TakeDamage(playerBehavior.damage);
+	}
+
+    public override void Die()
+	{
+		Destroy(gameObject);
+	}
+
 }
