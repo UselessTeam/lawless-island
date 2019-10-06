@@ -2,12 +2,14 @@
 
 namespace Graphics {
 
-    public class CharacterSpritesHolder : Singleton<CharacterSpritesHolder> {
+    public class SpritesHolder : Singleton<SpritesHolder> {
         public Sprite[] body;
         public Sprite[] eye;
         public Sprite[] pants;
         public Sprite[] clothes;
         public Sprite[] hair;
+
+        public Sprite[] items;
 
         private int RandomId(Sprite[] sprites) {
             return Random.Range(0, sprites.Length);
@@ -21,7 +23,7 @@ namespace Graphics {
             return Random.Range(-180f, 180f);
         }
 
-        public CharacterSpriteParameters RandomSet() {
+        public CharacterSpriteParameters RandomCharacterSet() {
             return new CharacterSpriteParameters(RandomId(body),
                                                  RandomId(eye),
                                                  RandomId(pants),

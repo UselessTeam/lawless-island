@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public enum ItemType : int
@@ -11,13 +10,13 @@ public enum ItemType : int
 
 public class InventoryHandler : Singleton<InventoryHandler>
 {
-	int[] Amounts;
+	int[] amounts;
+	public Action callback;
+	public static int inventoryItemTypeSize = System.Enum.GetNames(typeof(ItemType)).Length;
 
-	// Start is called before the first frame update
-	void Start()
+	void Awake()
 	{
-		int a = System.Enum.GetNames(typeof(ItemType)).Length;
-		Amounts = new int [a];
+		amounts = new int [inventoryItemTypeSize];
 	}
 
 	// Update is called once per frame
@@ -27,24 +26,30 @@ public class InventoryHandler : Singleton<InventoryHandler>
 
 	public void Add(ItemType type, int q)
 	{
-		Amounts[(int)type] += q;
+		amounts[(int)type] += q;
+		if(callback != null) {
+			callback.Invoke();
+		}
 	}
 
 	public void Remove(ItemType type, int q)
 	{
-		Amounts[(int)type] -= q;
-        if (Amounts[(int)type]<0)
+		amounts[(int)type] -= q;
+        if (amounts[(int)type]<0)
 			Debug.LogError("Quantite negative!");
+		if(callback != null) {
+			callback.Invoke();
+		}
 	}
 
 	public bool IsEnough(ItemType type, int q)
 	{
-        return Amounts[(int)type] >= q;
+        return amounts[(int)type] >= q;
 	}
 
-	public int getQuantity(ItemType type)
+	public int GetQuantity(ItemType type)
 	{
-		return Amounts[(int)type];
+		return amounts[(int)type];
 	}
 
 }
