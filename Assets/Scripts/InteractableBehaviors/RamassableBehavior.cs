@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RamassableBehavior : Interactable
 {
-	public ItemType item;
-	public int amount;
+    public ItemType item;
+    public int amount;
 
     public bool isRequirement = false;
     public ItemType requirement;
@@ -14,7 +14,7 @@ public class RamassableBehavior : Interactable
     // Start is called before the first frame update
     void Start()
     {
-		ParentStart();
+        ParentStart();
     }
 
     protected override void ShowWindow()
@@ -35,13 +35,16 @@ public class RamassableBehavior : Interactable
 
     // Update is called once per frame
     void Update()
-	{
-		ParentUpdate();
-	}
+    {
+        ParentUpdate();
+    }
 
-	protected override void Interact()
-	{
-		InventoryHandler.instance.Add(item, amount);
-		Destroy(gameObject);
-	}
+    protected override void Interact()
+    {
+        if (!isRequirement || InventoryHandler.instance.IsEnough(requirement, 1))
+        {
+            InventoryHandler.instance.Add(item, amount);
+            Destroy(gameObject);
+        }
+    }
 }

@@ -12,5 +12,6 @@ public class MapTile : Tile {
         if(Random.Range(0f, 1f) < decorationProbability) {
             tileData.gameObject = decorationGameObject;
         }
+        tileData.color = color;
     }
 }

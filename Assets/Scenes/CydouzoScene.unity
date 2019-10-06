@@ -120,44 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &754133280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1280209296094585803, guid: efc4760345d38f94ab60524b601666f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2773574436932424021}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &754133281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754133280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5220f777c0357843b00bb7f33758926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &962139279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2835753309739065066, guid: c252a676527e8be47a98b65c8d28637c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2835753308279594041}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &962139286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962139279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb28406e1beb3949b4e845ba7c2aac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fixCameraExtent: {x: 2, y: 1}
-  cameraSpeed: 0
 --- !u!1 &1253306927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2773574435696141178, guid: efc4760345d38f94ab60524b601666f4,
@@ -292,11 +254,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1527136981}
-    - target: {fileID: 8411576482267895282, guid: b8720416227a72d38b47197d6a042aa5,
-        type: 3}
-      propertyPath: SIZE
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8720416227a72d38b47197d6a042aa5, type: 3}
 --- !u!1001 &2773574436932424021
@@ -509,11 +466,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5724224629088935420, guid: 61af4bb4e22ecd744b0364268de5cd0c,
-        type: 3}
-      propertyPath: lastElementsSize
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61af4bb4e22ecd744b0364268de5cd0c, type: 3}
 --- !u!1001 &5943205459086405979
@@ -582,16 +534,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5943205458952813183, guid: cc88d6464ffad4240a7128939fd8e814,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5943205458952813183, guid: cc88d6464ffad4240a7128939fd8e814,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc88d6464ffad4240a7128939fd8e814, type: 3}
