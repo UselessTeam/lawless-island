@@ -23,14 +23,14 @@ public abstract class Interactable : MonoBehaviour
 		if (!GameHandler.instance.isInteractionPaused)
 		{
 			if (!isTouching && myCollider.IsTouching(playerCollider))
-			{
-				isTouching = true;
-				ButtonWindow.SetActive(true);
+            {
+                isTouching = true;
+                ShowWindow();
 			}
 			else if (isTouching && !myCollider.IsTouching(playerCollider))
 			{
 				isTouching = false;
-				ButtonWindow.SetActive(false);
+                HideWindow();
 			}
 
 			if (isTouching && Input.GetButtonDown("Action"))
@@ -40,5 +40,14 @@ public abstract class Interactable : MonoBehaviour
 		}
 	}
 
-	protected abstract void Interact();
+    protected virtual void ShowWindow()
+    {
+        ButtonWindow.SetActive(true);
+    }
+    protected virtual void HideWindow()
+    {
+        ButtonWindow.SetActive(false);
+    }
+
+    protected abstract void Interact();
 }

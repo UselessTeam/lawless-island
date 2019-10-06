@@ -7,7 +7,7 @@ public class CameraScript : Singleton<CameraScript>
 
     public static Vector2 position = Vector2.zero;
 
-    private const int PPU = 16;
+    public static readonly int PPU = 16;
     private const int FACTOR = 3;
 
     private int cachedHeight = -1;

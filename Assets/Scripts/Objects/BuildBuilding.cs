@@ -11,6 +11,6 @@ public class BuildBuilding : IActionable
 	// Start is called before the first frame update
 	public override void Activate(SelectableOption option)
 	{
-        option.parameter.building.Build();
+        option.onSelected.boundBuilding.Build();
     }
 }

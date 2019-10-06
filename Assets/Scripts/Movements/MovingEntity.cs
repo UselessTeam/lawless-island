@@ -73,5 +73,4 @@ public class MovingEntity : MonoBehaviour
 	{
 		return isTakingHit;
 	}
-
 }

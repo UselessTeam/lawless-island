@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878a8dee93a25256e8d4d0ce9a01773e, type: 3}
-  m_Name: BuildArmory
+  m_Name: Buy1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 5508725064705088119, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
-  name: Build Armory
-  description: For building better equipement
+  sprite: {fileID: 0}
+  name: Cooked mushrooms
+  description: Smells good!
   costForInspector:
-  - type: 0
-    amount: 5
-  onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
+  - type: 1
+    amount: 2
+  onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}
   createdItem:
     type: 0
-    amount: 0
+    amount: 10

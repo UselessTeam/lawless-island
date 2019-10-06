@@ -29,7 +29,7 @@ public class BuildingBehavior : Interactable
 		var panel = GameHandler.instance.OpenGui();
 		if (!isBuilt)
         {
-            buildingRequirement.parameter.building = this;
+            buildingRequirement.onSelected.boundBuilding = this;
             panel.Display(new SelectableOption[] { buildingRequirement });
 		}else
 		{

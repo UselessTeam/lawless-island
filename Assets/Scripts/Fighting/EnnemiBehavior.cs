@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnnemiBehavior : FightingBehavior
 {
     public float VisionRange;
+    public GameObject drop;
+    public float dropChance;
 
-	Transform playerTransform;
+    Transform playerTransform;
 	Collider2D playerCollider;
 
 	PlayerBehavior playerBehavior;
@@ -59,7 +61,9 @@ public class EnnemiBehavior : FightingBehavior
 
     public override void Die()
 	{
-		Destroy(gameObject);
+        if (Random.Range(0,1F) < dropChance)
+            Instantiate(drop, transform.position, new Quaternion());
+        Destroy(gameObject);
 	}
 
 }

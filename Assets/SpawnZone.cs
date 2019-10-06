@@ -7,13 +7,13 @@ public class SpawnZone : MonoBehaviour
 	public GameObject prefab;
 	public float spawnRate = 1;
 	public float characteristicDistance = 0.2F;
+    public int spawnCount = 100;
 
-	Collider2D spawnArea;
+    Collider2D spawnArea;
 	Vector3 areaCenter;
 	Vector3 areaExtents;
 
 	float timeSinceSpawn = 0;
-	public int lastElementsSize = 3;
 	Queue<Vector3> lastElements = new Queue<Vector3>();
 	// Start is called before the first frame update
 	void Start()
@@ -28,9 +28,12 @@ public class SpawnZone : MonoBehaviour
 	{
 		if (Time.fixedTime - timeSinceSpawn > 60 / spawnRate)
 		{
-			Instantiate(prefab, GeneratePosition(), new Quaternion(), transform);
-			timeSinceSpawn = Time.fixedTime;
-		}
+            if (spawnCount > transform.childCount)
+            {
+                Instantiate(prefab, GeneratePosition(), new Quaternion(), transform);
+            }
+            timeSinceSpawn = Time.fixedTime;
+        }
 	}
 
 	Vector3 GeneratePosition()
@@ -51,7 +54,7 @@ public class SpawnZone : MonoBehaviour
 			}
 		} while ((Random.Range(0, 1F) > probablityKeep) || !spawnArea.OverlapPoint(position));
 		lastElements.Enqueue(position);
-		if (lastElements.Count > lastElementsSize)
+		if (lastElements.Count > spawnCount)
 			lastElements.Dequeue();
 		return position;
 	}

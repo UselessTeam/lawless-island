@@ -22,17 +22,11 @@ public class SelectableOption : ScriptableObject {
     [SerializeField]
     public IActionable onSelected;
 	[SerializeField]
-	public Parameter parameter;
-}
-
-[Serializable]
-public struct Parameter
-{
-    public ItemStack item;
-    public BuildingBehavior building;
+	public ItemStack createdItem;
 }
 
 public abstract class IActionable : MonoBehaviour
 {
+    public BuildingBehavior boundBuilding;
     public abstract void Activate(SelectableOption option);
 }

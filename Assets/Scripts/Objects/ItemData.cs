@@ -8,9 +8,23 @@ public static class ItemData {
 }
 
 public enum ItemType {
-    Wood,
+    Food,
+    Stick,
+    Stone,
     Mushroom,
-    AutreObjetPhallique
+    Berry,
+    Flower,
+    Crab,
+    Wood,
+    Ore,
+    Metal,
+    Shadow,
+    Torch,
+    Axe,
+    Spear,
+    Pickaxe,
+    Sword,
+    Medal
 }
 
 [Serializable]
