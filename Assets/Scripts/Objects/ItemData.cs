@@ -9,7 +9,7 @@ public static class ItemData {
 
 public enum ItemType {
     Food,
-    Humans,
+    Human,
     Stick,
     Stone,
     Mushroom,
@@ -19,10 +19,12 @@ public enum ItemType {
     Wood,
     Ore,
     Metal,
+    Herb,
+    Coal,
     Shadow,
     Torch,
     Axe,
-    Spear,
+    Harpoon,
     Pickaxe,
     Sword,
     Medal

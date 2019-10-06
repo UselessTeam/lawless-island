@@ -35,7 +35,7 @@ namespace Graphics.GUI {
             int i = 0;
             foreach(ItemStack stack in itemList.ToArray()) {
                 items[i].quantity.text = stack.amount.ToString();
-                items[i].sprite.sprite = SpritesHolder.instance.items[(int)stack.type];
+                items[i].sprite.sprite = stack.type.GetSprite();
                 items[i].show = true;
                 i++;
             }

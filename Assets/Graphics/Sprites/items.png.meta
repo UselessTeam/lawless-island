@@ -34,7 +34,7 @@ TextureImporter:
     second: item_berry
   - first:
       213: 8132948862792318974
-    second: item_pinch
+    second: item_crab
   - first:
       213: 2614870373251885436
     second: item_fish
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: item_pinch
+      name: item_crab
       rect:
         serializedVersion: 2
         x: 24

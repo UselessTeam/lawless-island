@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1130861911366778424
+--- !u!1001 &5076151476733057811
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4648648147304231807, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_Name
-      value: Firecamp
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
@@ -69,39 +69,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
-      propertyPath: buildingRequirement
+      propertyPath: transactions.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9bd5db66f394f044eb4351298425a8fb,
+      objectReference: {fileID: 11400000, guid: 1b94aed89dc3abd48b4521423ffabb38,
         type: 2}
     - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
-      propertyPath: transactions.Array.data[0]
+      propertyPath: buildingRequirement
       value: 
-      objectReference: {fileID: 11400000, guid: 9cd1ca52c0bb1b947b30e65971904e29,
+      objectReference: {fileID: 11400000, guid: f4426faaf9c57854db8cab8556e05116,
         type: 2}
     - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: transactions.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 2c1efc1f1f4fd034ab407afb383167d3,
+      objectReference: {fileID: 11400000, guid: 83528bfe427eb524aa1df234948488d1,
         type: 2}
     - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: transactions.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 961c1e6a3b54a3b428dd6cbd6b2faa4e,
+      objectReference: {fileID: 11400000, guid: 972ff6c65ba7fac43bb78576c7bf02aa,
         type: 2}
     - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: transactions.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 58b9698a2f5eb344ea68f3c8560b4a9c,
+      objectReference: {fileID: 11400000, guid: c82fafdad589ca542a6e515ed6f7f046,
         type: 2}
     - target: {fileID: 1367354019631913130, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5308527982003062785, guid: 9287e516b8289d6a18af2a3149d41b59,
+      objectReference: {fileID: 6625692385018236696, guid: 9287e516b8289d6a18af2a3149d41b59,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bc628f71cc8a7479b65dbd58da8cc0, type: 3}

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SelectableOption : ScriptableObject {
@@ -18,7 +17,7 @@ public class SelectableOption : ScriptableObject {
     }
     private ItemList _cost;
     [SerializeField]
-    private ItemStack[] costForInspector;
+    private ItemStack[] costForInspector = null;
     [SerializeField]
     public IActionable onSelected;
 	[SerializeField]

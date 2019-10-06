@@ -9,8 +9,6 @@ namespace Graphics {
         public Sprite[] clothes;
         public Sprite[] hair;
 
-        public Sprite[] items;
-
         private int RandomId(Sprite[] sprites) {
             return Random.Range(0, sprites.Length);
         }
@@ -32,6 +30,24 @@ namespace Graphics {
                                                  RandomColor(),
                                                  RandomHue(),
                                                  RandomColor());
+        }
+
+        public Sprite[] items;
+
+        public Sprite FindItemSprite(ItemType type) {
+            foreach(Sprite itemSprite in items) {
+                if(itemSprite.name.Contains(type.ToString().ToLower())) {
+                    return itemSprite;
+                }
+            }
+            Debug.LogWarning("Couldn't find Sprite "+type.ToString().ToLower());
+            return null;
+        }
+    }
+
+    public static class SpritesExtensions {
+        public static Sprite GetSprite(this ItemType type) {
+            return SpritesHolder.instance.FindItemSprite(type);
         }
     }
 }

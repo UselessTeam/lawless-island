@@ -259,6 +259,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6901742717877141622, guid: 9cf84106b8946e3a8a8b4023151d36bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6338023803479276477, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95,
+        type: 3}
     - target: {fileID: 6901742718445329922, guid: 9cf84106b8946e3a8a8b4023151d36bf,
         type: 3}
       propertyPath: m_Text
@@ -408,6 +414,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6901742717877141622, guid: 9cf84106b8946e3a8a8b4023151d36bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2693009140137883590, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf84106b8946e3a8a8b4023151d36bf, type: 3}
 --- !u!114 &4635884921521383636 stripped
@@ -545,6 +557,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6901742717877141622, guid: 9cf84106b8946e3a8a8b4023151d36bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -956252262595852801, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95,
+        type: 3}
     - target: {fileID: 6901742718445329922, guid: 9cf84106b8946e3a8a8b4023151d36bf,
         type: 3}
       propertyPath: m_Text
@@ -689,6 +707,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6901742717877141622, guid: 9cf84106b8946e3a8a8b4023151d36bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6738218706411903907, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95,
+        type: 3}
     - target: {fileID: 6901742718445329922, guid: 9cf84106b8946e3a8a8b4023151d36bf,
         type: 3}
       propertyPath: m_Text

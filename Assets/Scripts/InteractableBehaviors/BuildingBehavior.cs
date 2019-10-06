@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Graphics.GUI;
 using UnityEngine;
 
 public class BuildingBehavior : Interactable
@@ -12,13 +11,16 @@ public class BuildingBehavior : Interactable
 
 	public bool isBuilt = false;
 
-	// Start is called before the first frame update
+	void Awake() {
+		Unbuilt.SetActive(!isBuilt);
+		Built.SetActive(isBuilt);
+	}
+
 	void Start()
 	{
 		ParentStart();
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		ParentUpdate();
@@ -26,13 +28,12 @@ public class BuildingBehavior : Interactable
 
 	protected override void Interact()
     {
-		var panel = GameHandler.instance.OpenGui();
+		GUIPanel panel = GameHandler.instance.OpenGui();
 		if (!isBuilt)
         {
             buildingRequirement.onSelected.boundBuilding = this;
             panel.Display(new SelectableOption[] { buildingRequirement });
-		}else
-		{
+		} else {
 			panel.Display(transactions);
 		}
 	}

@@ -16,17 +16,12 @@ namespace Graphics.GUI {
         [SerializeField]
         private GameObject selectablePrefab = null;
 
-        internal int width, height;
+        internal int width = 0, height = 0;
         internal List<GUISelectable> selectables = null;
 
         private GUISelectable selected = null;
 
         public Text flavorText = null;
-        public SelectableOption[] debugOptions = new SelectableOption[0];
-
-        void Start() {
-            Display(debugOptions);
-        }
 
         public void Clean() {
             foreach(GUISelectable selectable in selectables) {
@@ -67,6 +62,7 @@ namespace Graphics.GUI {
                 x++;
             }
             xMin = 0; xMax = 0; y = 0;
+            Reposition();
         }
 
         void Update() {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878a8dee93a25256e8d4d0ce9a01773e, type: 3}
   m_Name: Build
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 6625692385018236696, guid: 9287e516b8289d6a18af2a3149d41b59, type: 3}
   name: Stove
   description: Fire is at the base of any good civilization
   costForInspector:
