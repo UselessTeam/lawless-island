@@ -8,6 +8,12 @@ public enum ItemType : int
 	AutreObjetPhallique
 }
 
+[Serializable]
+public struct ItemAmount{
+	public ItemType type;
+	public int amount;
+}
+
 public class InventoryHandler : Singleton<InventoryHandler>
 {
 	int[] amounts;
@@ -32,6 +38,17 @@ public class InventoryHandler : Singleton<InventoryHandler>
 			callback.Invoke();
 		}
 	}
+	public void Add(ItemAmount item)
+	{
+		Add(item.type, item.amount);
+	}
+	public void Add(ItemAmount[] items)
+	{
+		foreach (ItemAmount item in items)
+		{
+			Add(item);
+		}
+	}
 
 	public void Remove(ItemType type, int q)
 	{
@@ -42,10 +59,34 @@ public class InventoryHandler : Singleton<InventoryHandler>
 			callback.Invoke();
 		}
 	}
+	public void Remove(ItemAmount item)
+	{
+		Remove(item.type, item.amount);
+	}
+	public void Remove(ItemAmount[] items)
+	{
+		foreach (ItemAmount item in items)
+		{
+			Remove(item);
+		}
+	}
 
 	public bool IsEnough(ItemType type, int q)
 	{
         return amounts[(int)type] >= q;
+	}
+    public bool IsEnough(ItemAmount item)
+	{
+		return IsEnough(item.type, item.amount);
+	}
+	public bool IsEnough(ItemAmount[] items)
+	{
+		foreach (ItemAmount item in items)
+		{
+			if (!IsEnough(item))
+				return false;
+		}
+		return true;
 	}
 
 	public int GetQuantity(ItemType type)

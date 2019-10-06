@@ -2,27 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RamassableBehavior : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
 	public GameObject ButtonWindow;
 
-	public ItemType item;
-	public int amount;
-
 	Collider2D myCollider;
 	Collider2D playerCollider;
-	bool isTouching;
+	bool isTouching = false;
 
+	protected void ParentStart()
+	{
 
-	// Start is called before the first frame update
-	void Start()
-    {
-		myCollider = GetComponent<Collider2D>();
+		myCollider = gameObject.GetComponent<Collider2D>();
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
 	}
-
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	protected void ParentUpdate()
 	{
 		if (!isTouching && myCollider.IsTouching(playerCollider))
 		{
@@ -37,14 +32,10 @@ public class RamassableBehavior : MonoBehaviour
 
 		if (isTouching && Input.GetButton("Action"))
 		{
-			InventoryHandler.instance.Add(item, amount);
-			RemoveRamassable();
+			Interact();
 		}
-	}
 
-	void RemoveRamassable()
-	{
-		//Animation?
-		Destroy(gameObject);
-	}
+    }
+
+	protected abstract void Interact();
 }
