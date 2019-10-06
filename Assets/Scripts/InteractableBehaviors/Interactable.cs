@@ -17,6 +17,7 @@ public abstract class Interactable : MonoBehaviour
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
 	}
 	// Update is called once per frame
+    
 	protected void ParentUpdate()
 	{
 		if (!isTouching && myCollider.IsTouching(playerCollider))
