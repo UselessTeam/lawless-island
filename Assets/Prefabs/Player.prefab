@@ -237,7 +237,7 @@ MonoBehaviour:
   hp: 20
   damage: 10
   attackObject: {fileID: 477580998}
-  attackTime: 1
+  attackTime: 0.1
   attackPopDistance: 1
 --- !u!1001 &7537336131022535512
 PrefabInstance:
@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 8745366867395107052, guid: efe5cdd63339bc632810e31714ae5a90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8745366867395107052, guid: efe5cdd63339bc632810e31714ae5a90,
         type: 3}

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  guiOpen: 0
 --- !u!114 &2835753309739065057
 MonoBehaviour:
   m_ObjectHideFlags: 0

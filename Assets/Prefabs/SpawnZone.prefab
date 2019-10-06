@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2966094848473172767, guid: 0b08b500268b3f64889de2e240a01085, type: 3}
-  spawnRate: 10
-  characteristicDistance: 0.3
+  spawnRate: 20
+  characteristicDistance: 0.1
   lastElementsSize: 100
 --- !u!60 &5724224629088935417
 PolygonCollider2D:
