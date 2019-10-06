@@ -66,7 +66,7 @@ namespace Graphics.GUI {
                 selectables.Add(selectable);
                 x++;
             }
-            xMin = 0; xMax = -1; y = 0;
+            xMin = 0; xMax = 0; y = 0;
         }
 
         void Update() {

@@ -7,6 +7,14 @@ namespace Graphics.GUI {
         private GameObject guiInventoryItemPrefab = null;
         private GUIInventoryItem[] items = null;
 
+        private const int TOOLS_SIZE = 4;
+        [SerializeField]
+        private GUIInventoryItem[] tools = new GUIInventoryItem[TOOLS_SIZE];
+        protected GUIInventoryItem sword { get { return tools[0]; } }
+        protected GUIInventoryItem harpoon { get { return tools[1]; } }
+        protected GUIInventoryItem axe { get { return tools[2]; } }
+        protected GUIInventoryItem pickaxe { get { return tools[3]; } }
+
         public const int SIZE = 6;
 
         void Awake() {
