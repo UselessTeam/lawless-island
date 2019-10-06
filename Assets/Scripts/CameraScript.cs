@@ -30,6 +30,6 @@ public class CameraScript : Singleton<CameraScript>
             Screen.SetResolution(desiredScreenWidth, desiredScreenHeight, Screen.fullScreenMode);
             camera.orthographicSize = desiredScreenHeight / (2f * PPU * FACTOR);
         }
-        camera.transform.position = new Vector2(Mathf.Round(PPU * position.x)/PPU, Mathf.Round(PPU * position.y)/PPU);
+        camera.transform.position = new Vector3(Mathf.Round(PPU * position.x)/PPU, Mathf.Round(PPU * position.y)/PPU, -10f);
     }
 }
