@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class BuildingBehavior : Interactable
 {
-	public ItemList buildingRequirement;
-	public struct Transaction
-	{
-		public ItemList price;
-		public ItemStack product;
-	}
-    public List<Transaction> transactions;
+	public SelectableOption buildingRequirement;
+
+    public SelectableOption[] transactions;
+
+	public GameObject Built;
+	public GameObject Unbuilt;
 
 	public bool isBuilt = false;
 
@@ -30,36 +29,21 @@ public class BuildingBehavior : Interactable
 
 	protected override void Interact()
     {
+		var panel = GameHandler.instance.OpenGui();
 		if (!isBuilt)
         {
-			if (InventoryHandler.instance.IsEnough(buildingRequirement))
-            {
-				//TODO Do GUI STUFF
-				Build();
-			}else
-			{
-                //TODO
-			}
+			panel.Display(new SelectableOption[] { buildingRequirement });
 		}else
 		{
-			//TODO Do GUI STUFF
+			panel.Display(transactions);
 		}
 	}
 
-	void Build()
-	{//TODO
-		isBuilt = true;
-		InventoryHandler.instance.Remove(buildingRequirement);
-    }
-
-	void Buy(Transaction transaction)
+	public void Build()
 	{
-		if (InventoryHandler.instance.IsEnough(transaction.price))
-		{
-			InventoryHandler.instance.Remove(transaction.price);
-			InventoryHandler.instance.Add(transaction.product);
-		}else
-		{
-		}
+		isBuilt = true;
+		Unbuilt.SetActive(false);
+		Built.SetActive(true);
 	}
+
 }

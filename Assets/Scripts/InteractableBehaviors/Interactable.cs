@@ -17,26 +17,28 @@ public abstract class Interactable : MonoBehaviour
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
 	}
 	// Update is called once per frame
-    
+
 	protected void ParentUpdate()
 	{
-		if (!isTouching && myCollider.IsTouching(playerCollider))
+		if (!GameHandler.instance.isInteractionPaused)
 		{
-			isTouching = true;
-			ButtonWindow.SetActive(true);
-		}
-		else if (isTouching && !myCollider.IsTouching(playerCollider))
-		{
-			isTouching = false;
-			ButtonWindow.SetActive(false);
-		}
+			if (!isTouching && myCollider.IsTouching(playerCollider))
+			{
+				isTouching = true;
+				ButtonWindow.SetActive(true);
+			}
+			else if (isTouching && !myCollider.IsTouching(playerCollider))
+			{
+				isTouching = false;
+				ButtonWindow.SetActive(false);
+			}
 
-		if (isTouching && Input.GetButton("Action"))
-		{
-			Interact();
+			if (isTouching && Input.GetButtonDown("Action"))
+			{
+				Interact();
+			}
 		}
-
-    }
+	}
 
 	protected abstract void Interact();
 }

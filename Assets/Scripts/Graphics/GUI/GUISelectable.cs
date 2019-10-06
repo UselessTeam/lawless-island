@@ -10,7 +10,7 @@ namespace Graphics.GUI {
         [SerializeField]
         internal SpriteRenderer spriteRenderer = null;
         [SerializeField]
-        internal Text name = null;
+        internal Text textName = null;
 
         internal SelectableOption associatedOption = null;
 
@@ -23,7 +23,7 @@ namespace Graphics.GUI {
 
         internal void DisplayIcon(SelectableOption option) {
             spriteRenderer.sprite = option.sprite;
-            name.text = option.name;
+            textName.text = option.name;
             associatedOption = option;
         }
     }

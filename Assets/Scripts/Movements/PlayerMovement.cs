@@ -19,35 +19,37 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		direction = new Vector2(0, 0);
-		if (Input.GetButton("Up"))
+		if (!GameHandler.instance.isPhysicsPaused)
 		{
-			direction.y += 1;
-		}
-		if (Input.GetButton("Down"))
-		{
-			direction.y -= 1;
-		}
-		if (Input.GetButton("Right"))
-		{
-			direction.x += 1;
-		}
-		if (Input.GetButton("Left"))
-		{
-			direction.x -= 1;
-		}
+			direction = new Vector2(0, 0);
+			if (Input.GetButton("Up"))
+			{
+				direction.y += 1;
+			}
+			if (Input.GetButton("Down"))
+			{
+				direction.y -= 1;
+			}
+			if (Input.GetButton("Right"))
+			{
+				direction.x += 1;
+			}
+			if (Input.GetButton("Left"))
+			{
+				direction.x -= 1;
+			}
 
-		if (direction.magnitude > 1)
-		{
-			timeSinceDiagonal = Time.fixedTime;
-			facingDirection = direction;
-		}
-        else if (direction.magnitude == 1 && Time.fixedTime - timeSinceDiagonal > switchTime)
-		{
-			facingDirection = direction;
-		}
+			if (direction.magnitude > 1)
+			{
+				timeSinceDiagonal = Time.fixedTime;
+				facingDirection = direction;
+			}
+			else if (direction.magnitude == 1 && Time.fixedTime - timeSinceDiagonal > switchTime)
+			{
+				facingDirection = direction;
+			}
 
-		movingEntity.SetDirection(direction);
-
+			movingEntity.SetDirection(direction);
+		}
 	}
 }

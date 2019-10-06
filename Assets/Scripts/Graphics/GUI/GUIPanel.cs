@@ -66,7 +66,6 @@ namespace Graphics.GUI {
                 selectables.Add(selectable);
                 x++;
             }
-            selector.gameObject.SetActive(false);
             xMin = 0; xMax = -1; y = 0;
         }
 
@@ -132,7 +131,7 @@ namespace Graphics.GUI {
             if(selected.associatedOption.onSelected != null) {
                 selected.associatedOption.onSelected.Activate(selected.associatedOption);
             }
-            Debug.Log("TODO : Tell GameHandler to close GUI");
-        }
+			GameHandler.instance.CloseGui();
+		}
     }
 }

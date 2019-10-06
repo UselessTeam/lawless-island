@@ -27,29 +27,33 @@ public class MovingEntity : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (isTakingHit)
-		{
-			direction = takeHitDirection;
-            if (Time.fixedTime - takeHitSince > takeHitTime)
-				isTakingHit = false;
-			velocity = takeHitDirection * takeHitSpeed;
-		} else if (direction.magnitude > 0.5F)
-		{
-			velocity += Acceleration * Time.deltaTime * direction;
-			if (velocity.magnitude > Speed)
+		if(!GameHandler.instance.isPhysicsPaused)
+        {
+			if (isTakingHit)
 			{
-				velocity = velocity.normalized * Speed;
+				direction = takeHitDirection;
+				if (Time.fixedTime - takeHitSince > takeHitTime)
+					isTakingHit = false;
+				velocity = takeHitDirection * takeHitSpeed;
 			}
-		}
-		else
-		{
-			velocity *= (1 - Ammortisesment);
-		}
+			else if (direction.magnitude > 0.5F)
+			{
+				velocity += Acceleration * Time.deltaTime * direction;
+				if (velocity.magnitude > Speed)
+				{
+					velocity = velocity.normalized * Speed;
+				}
+			}
+			else
+			{
+				velocity *= (1 - Ammortisesment);
+			}
 
-		transform.position += (Vector3)velocity * Time.deltaTime;
-		if (velocity.magnitude < Speed * 0.001)
-		{
-			velocity = new Vector2();
+			transform.position += (Vector3)velocity * Time.deltaTime;
+			if (velocity.magnitude < Speed * 0.001)
+			{
+				velocity = new Vector2();
+			}
 		}
 	}
 

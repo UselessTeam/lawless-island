@@ -21,6 +21,15 @@ public class SelectableOption : ScriptableObject {
     private ItemStack[] costForInspector;
     [SerializeField]
     public IActionable onSelected;
+	[SerializeField]
+	public Parameter parameter;
+}
+
+[Serializable]
+public struct Parameter
+{
+    public ItemStack item;
+    public BuildingBehavior building;
 }
 
 public abstract class IActionable : MonoBehaviour{

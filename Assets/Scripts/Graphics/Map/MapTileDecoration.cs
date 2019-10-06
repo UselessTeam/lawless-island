@@ -2,12 +2,12 @@
 
 public class MapTileDecoration : MonoBehaviour {
 
-    public SpriteRenderer renderer = null;
+    public SpriteRenderer spriteRenderer = null;
     public Sprite[] possibleSprites = null;
 
     void Awake()
     {
-        renderer.sprite = possibleSprites[Random.Range(0, possibleSprites.Length)];
+        spriteRenderer.sprite = possibleSprites[Random.Range(0, possibleSprites.Length)];
     }
 
     void Start()

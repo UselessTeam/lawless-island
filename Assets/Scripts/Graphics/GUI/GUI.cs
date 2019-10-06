@@ -12,17 +12,18 @@ namespace Graphics.GUI {
 
         void Start() {
             canvas.worldCamera = Camera.main;
-        }
+		}
+
 
         public GUIPanel OpenPanel() {
             panel.gameObject.SetActive(true);
-            return panel;
+			return panel;
         }
 
         public void Close() {
             panel.Clean();
             panel.gameObject.SetActive(false);
-        }
+		}
     }
 
 }
