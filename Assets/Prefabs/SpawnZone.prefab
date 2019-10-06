@@ -47,7 +47,7 @@ MonoBehaviour:
   prefab: {fileID: 2966094848473172767, guid: 0b08b500268b3f64889de2e240a01085, type: 3}
   spawnRate: 20
   characteristicDistance: 0.1
-  lastElementsSize: 100
+  spawnCount: 20
 --- !u!60 &5724224629088935417
 PolygonCollider2D:
   m_ObjectHideFlags: 0
