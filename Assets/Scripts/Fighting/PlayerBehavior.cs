@@ -31,7 +31,7 @@ public class PlayerBehavior : FightingBehavior
 		{
 			isAttacking = true;
 			timeSinceAttack = Time.fixedTime;
-			attackObject.SetActive(true); //TODO Move the attack :in front of the player
+			attackObject.SetActive(true);
 			attackDirection = movement.facingDirection;
 			attackObject.transform.localPosition += (Vector3)attackDirection * attackPopDistance;
 		}
@@ -79,6 +79,7 @@ public class PlayerBehavior : FightingBehavior
         else
         {
             //TODO GAMEOVER
+            Application.Quit();
             Destroy(transform.parent.gameObject);
         }
     }
