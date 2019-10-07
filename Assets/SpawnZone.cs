@@ -26,17 +26,22 @@ public class SpawnZone : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Time.fixedTime - timeSinceSpawn > 60 / spawnRate)
+		if (spawnRate > 0 && Time.fixedTime - timeSinceSpawn > 60 / spawnRate)
 		{
             if (spawnCount > transform.childCount)
             {
-                Instantiate(prefab, GeneratePosition(), new Quaternion(), transform);
+                SpawnOne();
             }
             timeSinceSpawn = Time.fixedTime;
         }
 	}
 
-	Vector3 GeneratePosition()
+    public GameObject SpawnOne()
+    {
+        return Instantiate(prefab, GeneratePosition(), new Quaternion(), transform);
+    }
+
+    Vector3 GeneratePosition()
 	{
 		Vector3 position;
 		float probablityKeep;
@@ -46,13 +51,16 @@ public class SpawnZone : MonoBehaviour
 			position.x += Random.Range(-areaExtents.x, areaExtents.x);
 			position.y += Random.Range(-areaExtents.y, areaExtents.y);
 			probablityKeep = 1;
-			foreach (var element in lastElements)
-			{
-				probablityKeep *= Mathf.Min(1,
-								Mathf.Exp(-Mathf.Pow(characteristicDistance * areaExtents.magnitude / (position - element).magnitude, 2))
-																);
-			}
-		} while ((Random.Range(0, 1F) > probablityKeep) || !spawnArea.OverlapPoint(position));
+            if (characteristicDistance > 0)
+            {
+                foreach (var element in lastElements)
+                {
+                    probablityKeep *= Mathf.Min(1,
+                                    Mathf.Exp(-Mathf.Pow(characteristicDistance * areaExtents.magnitude / (position - element).magnitude, 2))
+                                                                    );
+                }
+            }
+        } while ((Random.Range(0, 1F) > probablityKeep) || !spawnArea.OverlapPoint(position));
 		lastElements.Enqueue(position);
 		if (lastElements.Count > spawnCount)
 			lastElements.Dequeue();

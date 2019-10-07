@@ -14,9 +14,10 @@ public class PlayerBehavior : FightingBehavior
 	float timeSinceAttack = -10;
 	Vector2 attackDirection;
 	// Start is called before the first frame update
-	void Start()
+	protected override void Start()
     {
-		movement = GetComponent<PlayerMovement>();
+        base.Start();
+        movement = GetComponent<PlayerMovement>();
 	}
 
 	// Update is called once per frame
@@ -47,11 +48,18 @@ public class PlayerBehavior : FightingBehavior
 
 	public override bool IsCanAttack()
 	{
-		return !isAttacking && !GetComponent<MovingEntity>().IsTakingHit();
+		return !isAttacking && !GetComponentInParent<MovingEntity>().IsTakingHit();
 	}
 
 	public override void Die()
 	{
 		Destroy(gameObject);
 	}
+
+    public void SetNewPlayer(GameObject newPlayer)
+    {
+        FightingBehavior newFightStats = newPlayer.GetComponentInChildren<FightingBehavior>();
+        hpMax = newFightStats.hpMax;
+        hp = newFightStats.getHP;
+    }
 }

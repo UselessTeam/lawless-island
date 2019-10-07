@@ -6,7 +6,7 @@ public class MovingEntity : MonoBehaviour
 {
 	public Vector2 velocity;
 
-	public float Speed = 10;
+	public float speed = 10;
 	public float Ammortisesment = 0.5F;
 	public float Acceleration = 100;
 
@@ -39,9 +39,9 @@ public class MovingEntity : MonoBehaviour
 			else if (direction.magnitude > 0.5F)
 			{
 				velocity += Acceleration * Time.deltaTime * direction;
-				if (velocity.magnitude > Speed)
+				if (velocity.magnitude > speed)
 				{
-					velocity = velocity.normalized * Speed;
+					velocity = velocity.normalized * speed;
 				}
 			}
 			else
@@ -50,7 +50,7 @@ public class MovingEntity : MonoBehaviour
 			}
 
 			transform.position += (Vector3)velocity * Time.deltaTime;
-			if (velocity.magnitude < Speed * 0.001)
+			if (velocity.magnitude < speed * 0.001)
 			{
 				velocity = new Vector2();
 			}

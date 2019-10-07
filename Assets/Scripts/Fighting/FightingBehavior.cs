@@ -4,11 +4,18 @@ using UnityEngine;
 
 public abstract class FightingBehavior : MonoBehaviour
 {
-	public int hp = 20;
-	public int damage = 7;
-	// Start is called before the first frame update
+    public int hpMax = 20;
+    protected int hp;
+    public int getHP{ get { return hp; } }
+    public int damage = 7;
+    // Start is called before the first frame update
 
-	public void TakeDamage(int damage)
+    protected virtual void Start()
+    {
+        hp = hpMax;
+    }
+
+    public void TakeDamage(int damage)
 	{
 		hp -= damage;
 
@@ -27,8 +34,11 @@ public abstract class FightingBehavior : MonoBehaviour
 
 	public virtual bool IsCanAttack()
 	{
-		return !GetComponent<MovingEntity>().IsTakingHit();
+		return !GetComponentInParent<MovingEntity>().IsTakingHit();
 	}
 
-	public abstract void Die();
+    public virtual void Die()
+    {
+        Destroy(gameObject);
+    }
 }

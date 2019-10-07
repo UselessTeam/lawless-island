@@ -150,10 +150,25 @@ MonoBehaviour:
   - {fileID: 7152930139536384079, guid: 26c59f1d9b2ec7e85881f2c1bc8a5ce7, type: 3}
   - {fileID: -5725962078152895296, guid: 26c59f1d9b2ec7e85881f2c1bc8a5ce7, type: 3}
   items:
-  - {fileID: 6761164967045977113, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
-  - {fileID: 5508725064705088119, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 6395214293025444372, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -4538752222985096420, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 4533227004153260592, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 6738218706411903907, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -732356172534689064, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -7583409310137716746, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 8132948862792318974, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 2614870373251885436, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
   - {fileID: -68751727340038015, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -956252262595852801, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
   - {fileID: 6099581493293703690, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 5860025163644826426, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 980155311395259703, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -7833671090200325546, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -6338023803479276477, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 6761164967045977113, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -5428206428529569624, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: -2693009140137883590, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
+  - {fileID: 5508725064705088119, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95, type: 3}
 --- !u!114 &2835753309739065059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,4 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixCameraExtent: {x: 2, y: 1}
-  cameraSpeed: 0
+  cameraSpeed: 13

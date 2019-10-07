@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		movingEntity = GetComponent<MovingEntity>();
+		movingEntity = GetComponentInParent<MovingEntity>();
 	}
 
 	// Update is called once per frame

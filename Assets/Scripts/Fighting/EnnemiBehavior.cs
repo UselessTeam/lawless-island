@@ -17,10 +17,11 @@ public class EnnemiBehavior : FightingBehavior
 	MovingEntity movingEntity;
 	Collider2D myCollider;
 
-	// Start is called before the first frame update
-	void Start()
+    // Start is called before the first frame update
+    protected override void Start()
     {
-		playerTransform = GameHandler.instance.player.transform;
+        base.Start();
+        playerTransform = GameHandler.instance.player.transform;
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
 		playerBehavior = GameHandler.instance.player.GetComponent<PlayerBehavior>();
 		attackCollider = playerBehavior.attackObject.GetComponent<Collider2D>();
@@ -50,7 +51,7 @@ public class EnnemiBehavior : FightingBehavior
 
 	void HitPlayer(Vector2 toPlayer)
     {
-		playerTransform.GetComponent<MovingEntity>().TakeHit(toPlayer.normalized);
+		playerTransform.GetComponentInParent<MovingEntity>().TakeHit(toPlayer.normalized);
 		playerBehavior.TakeDamage(damage);
 	}
 	void HitSelf(Vector2 direction)
