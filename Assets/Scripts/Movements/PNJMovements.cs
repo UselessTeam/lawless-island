@@ -6,7 +6,7 @@ public class PNJMovements : MonoBehaviour
 {
     float movementSpeed;
     public float movementRate = 3;
-
+    public bool generateSpeed = false;
     float timeSinceLastMove = 0;
     float randTime;
     Vector3 goingTo;
@@ -17,11 +17,12 @@ public class PNJMovements : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movementSpeed = Random.Range(HumanHandler.instance.minSpeed, HumanHandler.instance.maxSpeed);
-
         movingEntity = GetComponentInParent<MovingEntity>();
-        movingEntity.speed = movementSpeed;
-
+        if (generateSpeed)
+        {
+            movementSpeed = Random.Range(HumanHandler.instance.minSpeed, HumanHandler.instance.maxSpeed);
+            movingEntity.speed = movementSpeed;
+        }
         randTime = Random.Range(-20 / movementRate, 20 / movementRate);
     }
 

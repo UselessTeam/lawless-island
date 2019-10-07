@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementRate: 3
+  generateSpeed: 1
 --- !u!114 &945719944271592708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 20
   damage: 0
+  armor: 0
 --- !u!1 &945719944414200710
 GameObject:
   m_ObjectHideFlags: 0

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 290739556}
   - component: {fileID: 614424259}
   - component: {fileID: 5904477210670975884}
+  - component: {fileID: 5623426981865935221}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Untagged
@@ -206,3 +207,17 @@ PolygonCollider2D:
       - {x: 0.46585083, y: -0.34938776}
       - {x: 0.46584988, y: -0.026462436}
       - {x: 0.055, y: 0.08}
+--- !u!114 &5623426981865935221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183770490102614743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefc573a8db89cf458fdd36c80ad9423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementRate: 3
+  generateSpeed: 0

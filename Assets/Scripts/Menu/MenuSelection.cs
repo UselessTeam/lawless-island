@@ -7,7 +7,7 @@ public class MenuSelection : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("CydouzoScene");
+        SceneManager.LoadScene("Island");
     }
 
     public void ShowCredits()

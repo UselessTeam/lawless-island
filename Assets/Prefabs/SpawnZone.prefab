@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5724224629088935421}
   - component: {fileID: 5724224629088935420}
   - component: {fileID: 5724224629088935417}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SpawnZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

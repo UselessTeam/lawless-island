@@ -22,7 +22,7 @@ public class EnnemiBehavior : FightingBehavior
     {
         base.Start();
         playerTransform = GameHandler.instance.player.transform;
-		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
+		playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
 		playerBehavior = GameHandler.instance.player.GetComponent<PlayerBehavior>();
 		attackCollider = playerBehavior.attackObject.GetComponent<Collider2D>();
 		movingEntity = GetComponent<MovingEntity>();

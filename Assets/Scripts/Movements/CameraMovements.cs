@@ -11,6 +11,7 @@ public class CameraMovements : MonoBehaviour
 	void Start()
     {
         player = GameHandler.instance.player.GetComponent<PlayerMovement>();
+        CameraScript.position = player.transform.position;
     }
 
     // Update is called once per frame
