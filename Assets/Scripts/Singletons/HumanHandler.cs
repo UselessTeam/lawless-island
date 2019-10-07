@@ -14,6 +14,7 @@ public class HumanHandler : Singleton<HumanHandler>
     void Start()
     {
         //humanArray.AddRange(GetComponentsInChildren<GameObject>());
+        InventoryHandler.instance.Add(ItemType.Human, humanArray.Count);
     }
 
     public void SpawnHuman()
