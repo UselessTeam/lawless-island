@@ -10,7 +10,7 @@ namespace Graphics.GUI {
         public GUIPanel panel;
         [SerializeField]
         internal GUIInventory inventory;
-        public Text debugText;
+        // public Text debugText;
 
         void Start() {
             canvas.worldCamera = Camera.main;

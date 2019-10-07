@@ -117,7 +117,6 @@ MonoBehaviour:
   canvas: {fileID: 8411576483228242386}
   panel: {fileID: 4321834363511886834}
   inventory: {fileID: 8411576482267895282}
-  debugText: {fileID: 8411576484232328160}
 --- !u!1 &8411576484232328162
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8411576484232328161
 RectTransform:
   m_ObjectHideFlags: 0

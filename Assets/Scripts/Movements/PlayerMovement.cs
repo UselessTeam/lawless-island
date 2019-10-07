@@ -1,4 +1,4 @@
-﻿using System.Net.Mime;
+﻿using Graphics.GUI;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 direction.x -= 1;
             }
+            //GUIHandler.instance.debugText.text = direction.ToString();
 
             if (direction.magnitude > 1)
             {
