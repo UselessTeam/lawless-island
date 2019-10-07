@@ -59,6 +59,9 @@ TextureImporter:
   - first:
       213: 4533227004153260592
     second: icon_sleep
+  - first:
+      213: -4316572280515191433
+    second: item_shadowball
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -561,6 +564,27 @@ TextureImporter:
       bones: []
       spriteID: 4bb34e1f19ac445ca9b5d14594bc2002
       internalID: 4533227004153260592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_shadowball
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feba669cd053fab419be073c705c6821
+      internalID: -4316572280515191433
       vertices: []
       indices: 
       edges: []
