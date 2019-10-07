@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class PNJInterraction : Interactable
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private GameObject randomText = null;
+
     void Start()
     {
         ParentStart();
     }
 
-    // Update is called once per frame
     void Update()
     {
         ParentUpdate();
     }
 
+    protected override void ShowWindow()
+    {
+        Instantiate(randomText, transform);
+    }
+
     protected override void Interact()
     {
-
+        Instantiate(randomText, transform);
     }
 }

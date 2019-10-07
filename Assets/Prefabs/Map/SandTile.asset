@@ -37,5 +37,6 @@ MonoBehaviour:
   m_ColliderType: 1
   sprites:
   - {fileID: 7448977681580442226, guid: a692eceb72aaddcaba959d2d9b30615e, type: 3}
-  decorationGameObject: {fileID: 0}
-  decorationProbability: 0
+  decorationGameObject: {fileID: 5672459938451277081, guid: 42384af8aae7b45898ba22f333ad3f5c,
+    type: 3}
+  decorationProbability: 0.4

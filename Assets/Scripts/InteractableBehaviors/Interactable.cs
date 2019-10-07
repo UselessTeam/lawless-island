@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public GameObject ButtonWindow;
+    public GameObject ButtonWindow = null;
 
     Collider2D myCollider;
     Collider2D playerCollider;
@@ -47,11 +47,15 @@ public abstract class Interactable : MonoBehaviour
 
     protected virtual void ShowWindow()
     {
-        ButtonWindow.SetActive(true);
+        if(ButtonWindow != null) {
+            ButtonWindow.SetActive(true);
+        }
     }
     protected virtual void HideWindow()
     {
-        ButtonWindow.SetActive(false);
+        if(ButtonWindow != null) {
+            ButtonWindow.SetActive(false);
+        }
     }
 
     protected abstract void Interact();

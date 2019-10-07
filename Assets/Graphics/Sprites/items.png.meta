@@ -62,6 +62,12 @@ TextureImporter:
   - first:
       213: -4316572280515191433
     second: item_shadowball
+  - first:
+      213: -4666974982679245883
+    second: item_torcj
+  - first:
+      213: -2327027399558321675
+    second: item_medal
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -174,10 +180,10 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 60
         width: 12
         height: 12
-      alignment: 0
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -195,7 +201,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 48
+        y: 60
         width: 12
         height: 12
       alignment: 0
@@ -216,7 +222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 48
+        y: 60
         width: 12
         height: 12
       alignment: 0
@@ -237,7 +243,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 48
+        y: 60
         width: 12
         height: 12
       alignment: 0
@@ -258,7 +264,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 36
+        y: 48
         width: 12
         height: 12
       alignment: 0
@@ -279,7 +285,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 36
+        y: 48
         width: 12
         height: 12
       alignment: 0
@@ -300,7 +306,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 36
+        y: 48
         width: 12
         height: 12
       alignment: 0
@@ -321,7 +327,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 36
+        y: 48
         width: 12
         height: 12
       alignment: 0
@@ -342,7 +348,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 36
         width: 12
         height: 12
       alignment: 0
@@ -363,7 +369,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 24
+        y: 36
         width: 12
         height: 12
       alignment: 0
@@ -384,7 +390,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 24
+        y: 36
         width: 12
         height: 12
       alignment: 0
@@ -405,7 +411,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 24
+        y: 36
         width: 12
         height: 12
       alignment: 0
@@ -426,7 +432,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
+        y: 24
         width: 12
         height: 12
       alignment: 0
@@ -447,7 +453,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 12
+        y: 24
         width: 12
         height: 12
       alignment: 0
@@ -468,7 +474,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 12
+        y: 24
         width: 12
         height: 12
       alignment: 0
@@ -489,7 +495,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 12
+        y: 24
         width: 12
         height: 12
       alignment: 0
@@ -510,7 +516,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 12
         width: 12
         height: 12
       alignment: 0
@@ -531,7 +537,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 0
+        y: 12
         width: 12
         height: 12
       alignment: 0
@@ -552,7 +558,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 0
+        y: 12
         width: 12
         height: 12
       alignment: 0
@@ -573,6 +579,27 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
+        y: 12
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feba669cd053fab419be073c705c6821
+      internalID: -4316572280515191433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_torcj
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 12
         height: 12
@@ -583,8 +610,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feba669cd053fab419be073c705c6821
-      internalID: -4316572280515191433
+      spriteID: 4f9d20c6858c4e1ad956d6016b17bb38
+      internalID: -4666974982679245883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_medal
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45dc09fd346d2e78a3a3150db45d7d5
+      internalID: -2327027399558321675
       vertices: []
       indices: 
       edges: []
