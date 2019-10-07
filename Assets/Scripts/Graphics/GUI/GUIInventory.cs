@@ -5,6 +5,28 @@ namespace Graphics.GUI
 {
     internal class GUIInventory : MonoBehaviour
     {
+        private readonly static ItemType[] GENERAL_ITEM_TYPES = new ItemType[] {
+            ItemType.Berry,
+            ItemType.Coal,
+            ItemType.Crab,
+            ItemType.Flower,
+            ItemType.Herb,
+            ItemType.Medal,
+            ItemType.Metal,
+            ItemType.Mushroom,
+            ItemType.Ore,
+            ItemType.Shadow,
+            ItemType.Stick,
+            ItemType.Stone,
+            ItemType.Torch,
+            ItemType.Wood
+        };
+        private readonly static ItemType[] TOOLS_ITEM_TYPES = new ItemType[4] {
+            ItemType.Sword,
+            ItemType.Harpoon,
+            ItemType.Axe,
+            ItemType.Pickaxe
+        };
 
         [SerializeField]
         private GameObject guiInventoryItemPrefab = null;
@@ -20,6 +42,8 @@ namespace Graphics.GUI
         protected GUIInventoryItem pickaxe { get { return tools[3]; } }
         [SerializeField]
         private GUISelector selector = null;
+        [SerializeField]
+        private GUIItemList generalItemList = null;
 
         void Awake()
         {
@@ -31,7 +55,7 @@ namespace Graphics.GUI
                 items[i] = itemGameObject.GetComponent<GUIInventoryItem>();
                 items[i].show = false;
             }
-            selector.gameObject.SetActive(false);
+            SelectTool(0);
         }
 
         void Start()
@@ -44,19 +68,17 @@ namespace Graphics.GUI
         }
 
         void UpdateGUI() {
-            for (int i = 0; i < InventoryHandler.inventoryItemTypeSize; i++) {
-                int quantity = InventoryHandler.instance.GetQuantity((ItemType)i);
-                if (quantity > 0)
-                {
-                    items[i].quantity.text = quantity.ToString();
-                    items[i].show = true;
-                }
-                else
-                {
-                    items[i].show = false;
+            ItemList list = new ItemList();
+            foreach(ItemType type in GENERAL_ITEM_TYPES) {
+                int quantity = InventoryHandler.instance.GetQuantity(type);
+                if(quantity > 0) {
+                    list.Add(type, quantity);
                 }
             }
-
+            generalItemList.Display(list);
+            for(int i = 0; i < TOOLS_SIZE; i++){
+                tools[i].show = InventoryHandler.instance.IsEnough(TOOLS_ITEM_TYPES[i], 1);
+            }
         }
 
         internal void SelectTool(int tool) {
