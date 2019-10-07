@@ -53,7 +53,6 @@ public class GameHandler : Singleton<GameHandler>
             if (Input.GetButtonDown("Tool" + (i+1).ToString()))
             {
                 selectedTool = i;
-                Debug.Log(i);
                 GUIHandler.instance.SelectTool(i);
             }
         }
