@@ -81,7 +81,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4538752222985096420, guid: fc9e01f8c9b9b9c8d8ed3d6c29396f95,
+      objectReference: {fileID: 21300000, guid: d1faac3398cc37a49974bf45af10cbe1,
         type: 3}
+    - target: {fileID: 2966094848473172764, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172764, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094849604837081, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094849604837083, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b08b500268b3f64889de2e240a01085, type: 3}

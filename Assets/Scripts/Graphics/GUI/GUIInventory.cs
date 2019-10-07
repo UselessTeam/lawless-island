@@ -44,6 +44,10 @@ namespace Graphics.GUI
         private GUISelector selector = null;
         [SerializeField]
         private GUIItemList generalItemList = null;
+        [SerializeField]
+        private GUIInventoryItem humans = null;
+        [SerializeField]
+        private GUIInventoryItem food = null;
 
         void Awake()
         {
@@ -79,6 +83,8 @@ namespace Graphics.GUI
             for(int i = 0; i < TOOLS_SIZE; i++){
                 tools[i].show = InventoryHandler.instance.IsEnough(TOOLS_ITEM_TYPES[i], 1);
             }
+            humans.quantity.text = InventoryHandler.instance.GetQuantity(ItemType.Human).ToString();
+            food.quantity.text = InventoryHandler.instance.GetQuantity(ItemType.Food).ToString();
         }
 
         internal void SelectTool(int tool) {
