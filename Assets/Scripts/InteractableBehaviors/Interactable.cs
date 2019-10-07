@@ -4,42 +4,46 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-	public GameObject ButtonWindow;
+    public GameObject ButtonWindow;
 
-	Collider2D myCollider;
-	Collider2D playerCollider;
-	bool isTouching = false;
+    Collider2D myCollider;
+    Collider2D playerCollider;
+    bool isTouching = false;
 
-	protected void ParentStart()
-	{
-		myCollider = gameObject.GetComponent<Collider2D>();
-		playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
-	}
+    protected void ParentStart()
+    {
+        myCollider = gameObject.GetComponent<Collider2D>();
+        UpdateCollider();
+    }
 
-	protected void ParentUpdate()
-	{
-        if(playerCollider == null)
-            playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
+    public void UpdateCollider()
+    {
+        playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
+    }
 
+    protected void ParentUpdate()
+    {
+        //if (playerCollider == null)
+        UpdateCollider();
         if (!GameHandler.instance.isInteractionPaused)
-		{
-			if (!isTouching && myCollider.IsTouching(playerCollider))
+        {
+            if (!isTouching && myCollider.IsTouching(playerCollider))
             {
                 isTouching = true;
                 ShowWindow();
-			}
-			else if (isTouching && !myCollider.IsTouching(playerCollider))
-			{
-				isTouching = false;
+            }
+            else if (isTouching && !myCollider.IsTouching(playerCollider))
+            {
+                isTouching = false;
                 HideWindow();
-			}
+            }
 
-			if (isTouching && Input.GetButtonDown("Action"))
-			{
-				Interact();
-			}
-		}
-	}
+            if (isTouching && Input.GetButtonDown("Action"))
+            {
+                Interact();
+            }
+        }
+    }
 
     protected virtual void ShowWindow()
     {

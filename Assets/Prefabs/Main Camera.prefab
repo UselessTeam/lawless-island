@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixCameraExtent: {x: 4, y: 2}
-  cameraSpeed: 13
+  cameraSpeed: 18
 --- !u!114 &1225746374
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -78,8 +78,7 @@ public class PlayerBehavior : FightingBehavior
         }
         else
         {
-            //TODO GAMEOVER
-            Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
             Destroy(transform.parent.gameObject);
         }
     }

@@ -48,9 +48,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.6155262, y: -1.9758701}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 10.492182
 --- !u!114 &4080576165116882400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,9 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b0c59ed7e5c2f448537348905dc639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  spawnRate: 1
-  characteristicDistance: 0.2
+  prefab: {fileID: 945719943122537607, guid: ce8ab2f1235ebfc4f8d29c653d2bfefb, type: 3}
+  spawnRate: 0
+  characteristicDistance: 0
   spawnCount: 100
 --- !u!114 &4080576165116882403
 MonoBehaviour:
@@ -82,9 +82,9 @@ MonoBehaviour:
   humanArray:
   - {fileID: 5896234790551199628}
   - {fileID: 5896234790103987638}
-  minSpeed: 4
-  maxSpeed: 12
-  minHP: 15
+  minSpeed: 7
+  maxSpeed: 13
+  minHP: 25
   maxHP: 40
 --- !u!1001 &6686857029759334705
 PrefabInstance:

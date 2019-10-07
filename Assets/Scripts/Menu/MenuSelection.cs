@@ -12,7 +12,7 @@ public class MenuSelection : MonoBehaviour
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene("Menu");
+        Application.Quit();
     }
 
     public void ShowCredits()

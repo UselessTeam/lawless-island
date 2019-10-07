@@ -17,9 +17,11 @@ MonoBehaviour:
   description: Become a master of fire and push your civilization to the next step
   costForInspector:
   - type: 3
-    amount: 6
-  - type: 8
     amount: 4
+  - type: 8
+    amount: 2
+  - type: 14
+    amount: 2
   onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
     type: 3}
   createdItem:

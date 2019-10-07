@@ -16,6 +16,12 @@ public class InventoryHandler : Singleton<InventoryHandler>
 	// Update is called once per frame
 	void Update()
     {
+        if (Input.GetKeyDown("m"))
+            for (int i = 0; i < inventoryItemTypeSize; i++)
+                amounts[i] += 10;
+
+        if (Input.GetKeyDown("k"))
+            GameHandler.instance.player.GetComponent<PlayerBehavior>().Die();
     }
 
 	public void Add(ItemType type, int q)

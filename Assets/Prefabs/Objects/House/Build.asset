@@ -17,11 +17,9 @@ MonoBehaviour:
   description: We can do all sorts of things in a house
   costForInspector:
   - type: 8
-    amount: 8
-  - type: 3
-    amount: 6
-  - type: 2
     amount: 4
+  - type: 3
+    amount: 2
   onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
     type: 3}
   createdItem:
