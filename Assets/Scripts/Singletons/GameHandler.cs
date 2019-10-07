@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Graphics.GUI;
 
 public class GameHandler : Singleton<GameHandler>
 {
@@ -19,17 +20,17 @@ public class GameHandler : Singleton<GameHandler>
         get { return guiOpen; }
     }
 
-    public Graphics.GUI.GUIPanel OpenGui()
+    public GUIPanel OpenGui()
     {
         guiOpen = true;
-        return Graphics.GUI.GUI.instance.OpenPanel();
+        return GUIHandler.instance.OpenPanel();
     }
     public void CloseGui()
     {
         if (guiOpen)
         {
             guiOpen = false;
-            Graphics.GUI.GUI.instance.Close();
+            GUIHandler.instance.Close();
         }
     }
 
@@ -52,7 +53,8 @@ public class GameHandler : Singleton<GameHandler>
             if (Input.GetButtonDown("Tool" + (i+1).ToString()))
             {
                 selectedTool = i;
-                //TODO update gui
+                Debug.Log(i);
+                GUIHandler.instance.SelectTool(i);
             }
         }
     }
