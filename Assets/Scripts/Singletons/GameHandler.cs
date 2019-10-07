@@ -35,6 +35,7 @@ public class GameHandler : Singleton<GameHandler>
 
     private void Start()
     {
+        SoundHandler.instance.PlayMusic("bornForAdventure");
         tools.Add(ItemType.Sword);
         tools.Add(ItemType.Harpoon);
         tools.Add(ItemType.Axe);

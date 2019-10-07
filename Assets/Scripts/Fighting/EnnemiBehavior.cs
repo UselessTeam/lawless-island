@@ -26,7 +26,7 @@ public class EnnemiBehavior : FightingBehavior
 		playerBehavior = GameHandler.instance.player.GetComponent<PlayerBehavior>();
 		attackCollider = playerBehavior.attackObject.GetComponent<Collider2D>();
 		movingEntity = GetComponent<MovingEntity>();
-		myCollider = GetComponent<Collider2D>();
+		myCollider = GetComponentInParent<Collider2D>();
 	}
 
 	// Update is called once per frame

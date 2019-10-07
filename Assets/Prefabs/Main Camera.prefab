@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  selectedTool: 0
+  tools: 
   guiOpen: 0
 --- !u!114 &2835753309739065057
 MonoBehaviour:
@@ -194,5 +196,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb28406e1beb3949b4e845ba7c2aac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixCameraExtent: {x: 2, y: 1}
+  fixCameraExtent: {x: 4, y: 2}
   cameraSpeed: 13

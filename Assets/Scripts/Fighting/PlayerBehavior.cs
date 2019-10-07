@@ -10,7 +10,9 @@ public class PlayerBehavior : FightingBehavior
 	public float attackTime;
 	public float attackPopDistance;
 
-	bool isAttacking = false;
+    public int[] equipementDamage;
+
+    bool isAttacking = false;
 	float timeSinceAttack = -10;
 	Vector2 attackDirection;
 	// Start is called before the first frame update
@@ -18,7 +20,8 @@ public class PlayerBehavior : FightingBehavior
     {
         base.Start();
         movement = GetComponent<PlayerMovement>();
-	}
+        UpdateDamage();
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -51,7 +54,20 @@ public class PlayerBehavior : FightingBehavior
 		return !isAttacking && !GetComponentInParent<MovingEntity>().IsTakingHit();
 	}
 
-	public override void Die()
+    public void UpdateDamage()
+    {
+        int equipement = GameHandler.instance.selectedTool;
+        if (InventoryHandler.instance.IsEnough(GameHandler.instance.tools[equipement], 1))
+        {
+            damage = equipementDamage[equipement];
+        }
+        else
+        {
+            damage = equipementDamage[equipementDamage.Length - 1];
+        }
+    }
+
+    public override void Die()
 	{
         if (InventoryHandler.instance.IsEnough(ItemType.Human, 2))
         {

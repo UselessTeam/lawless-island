@@ -8,6 +8,7 @@ public class PNJMovements : MonoBehaviour
     public float movementRate = 3;
 
     float timeSinceLastMove = 0;
+    float randTime;
     Vector3 goingTo;
     Vector3 direction;
 
@@ -20,14 +21,17 @@ public class PNJMovements : MonoBehaviour
 
         movingEntity = GetComponentInParent<MovingEntity>();
         movingEntity.speed = movementSpeed;
+
+        randTime = Random.Range(-20 / movementRate, 20 / movementRate);
     }
 
     // Update is called once per frame
     void Update()
     {
         movingEntity.SetDirection(direction);
-        if (movementRate > 0 && Time.fixedTime - timeSinceLastMove > 60 / movementRate)
+        if (movementRate > 0 && Time.fixedTime - timeSinceLastMove > 60 / movementRate + randTime)
         {
+            randTime = Random.Range(-20 / movementRate, 20 / movementRate);
             goingTo = HumanHandler.instance.GetComponent<SpawnZone>().GeneratePosition();
             direction = (goingTo - transform.parent.position).normalized;
             timeSinceLastMove = Time.fixedTime;

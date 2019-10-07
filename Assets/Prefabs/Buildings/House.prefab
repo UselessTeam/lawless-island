@@ -12,15 +12,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: House
       objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231800, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231800, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.008108437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231800, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19460106
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231800, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.1783848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231800, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.629736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.5239112
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.5623922
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
@@ -67,10 +97,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+    - target: {fileID: 1367354019631913132, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
-      propertyPath: transactions.Array.size
-      value: 3
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367354019247846880, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1367354019631913130, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
@@ -78,5 +113,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8922806545422484088, guid: 9287e516b8289d6a18af2a3149d41b59,
         type: 3}
+    - target: {fileID: 145587957125043792, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bc628f71cc8a7479b65dbd58da8cc0, type: 3}
