@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: isRequirement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: amount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6915937554193068218, guid: 0b08b500268b3f64889de2e240a01085,
         type: 3}
       propertyPath: m_Sprite

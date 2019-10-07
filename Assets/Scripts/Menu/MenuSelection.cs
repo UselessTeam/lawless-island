@@ -10,6 +10,11 @@ public class MenuSelection : MonoBehaviour
         SceneManager.LoadScene("Island");
     }
 
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void ShowCredits()
     {
         transform.parent.Find("Credits").gameObject.SetActive(true);

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Island.unity
     guid: 21a3171a38c8849dfb07b79f2c9681f1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 43e7d8d3130607848abcee02f10e40ed
   - enabled: 0
     path: Assets/Scenes/CydouzoScene.unity
     guid: b6865bd775d20e24b96400c91184e634
