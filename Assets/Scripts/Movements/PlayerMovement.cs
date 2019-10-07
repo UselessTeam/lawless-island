@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Net.Mime;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     Vector2 direction;
     MovingEntity movingEntity;
+
+    public Transform visual = null;
 
     public Vector2 facingDirection;
     float timeSinceDiagonal = -10;

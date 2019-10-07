@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingEntity : MonoBehaviour
@@ -19,6 +17,7 @@ public class MovingEntity : MonoBehaviour
     float takeHitSince;
     Vector2 takeHitDirection;
 
+    public Transform visual;
 
     // Update is called once per frame
     void Update()
@@ -50,7 +49,7 @@ public class MovingEntity : MonoBehaviour
 
             if (velocity.magnitude < speed * 0.001)
             {
-                velocity = new Vector2();
+                velocity = Vector2.zero;
             }
         }
     }
@@ -64,6 +63,11 @@ public class MovingEntity : MonoBehaviour
 
     public void SetDirection(Vector2 direction)
     {
+        if(visual != null) {
+            if(direction.x != 0) {
+                visual.localScale = new Vector3(Mathf.Abs(visual.localScale.y) * (direction.x == 1 ? 1f : -1f), visual.localScale.y, visual.localScale.z);
+            }
+        }
         this.direction = direction;
     }
 

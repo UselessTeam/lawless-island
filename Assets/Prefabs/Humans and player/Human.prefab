@@ -134,6 +134,7 @@ MonoBehaviour:
   Acceleration: 100
   takeHitTime: 0.3
   takeHitSpeed: 20
+  visual: {fileID: 945719943292828029}
 --- !u!61 &2526202470294882215
 BoxCollider2D:
   m_ObjectHideFlags: 0
