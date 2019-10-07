@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Graphics.GUI
 {
@@ -12,11 +13,13 @@ namespace Graphics.GUI
 
         [SerializeField]
         private GUIInventoryItem[] tools = new GUIInventoryItem[TOOLS_SIZE];
+        private int selectedTool = -1;
         protected GUIInventoryItem sword { get { return tools[0]; } }
         protected GUIInventoryItem harpoon { get { return tools[1]; } }
         protected GUIInventoryItem axe { get { return tools[2]; } }
         protected GUIInventoryItem pickaxe { get { return tools[3]; } }
-        public const int SIZE = 6;
+        [SerializeField]
+        private GUISelector selector = null;
 
         void Awake()
         {
@@ -28,6 +31,7 @@ namespace Graphics.GUI
                 items[i] = itemGameObject.GetComponent<GUIInventoryItem>();
                 items[i].show = false;
             }
+            selector.gameObject.SetActive(false);
         }
 
         void Start()
@@ -39,10 +43,8 @@ namespace Graphics.GUI
             }
         }
 
-        void UpdateGUI()
-        {
-            for (int i = 0; i < InventoryHandler.inventoryItemTypeSize; i++)
-            {
+        void UpdateGUI() {
+            for (int i = 0; i < InventoryHandler.inventoryItemTypeSize; i++) {
                 int quantity = InventoryHandler.instance.GetQuantity((ItemType)i);
                 if (quantity > 0)
                 {
@@ -53,6 +55,15 @@ namespace Graphics.GUI
                 {
                     items[i].show = false;
                 }
+            }
+
+        }
+
+        internal void SelectTool(int tool) {
+            if(tool != selectedTool) {
+                selector.gameObject.SetActive(true);
+                selector.Select((RectTransform)tools[tool].transform);
+                selectedTool = tool;
             }
         }
     }
