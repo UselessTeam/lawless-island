@@ -41,7 +41,7 @@ public class SpawnZone : MonoBehaviour
         return Instantiate(prefab, GeneratePosition(), new Quaternion(), transform);
     }
 
-    Vector3 GeneratePosition()
+    public Vector3 GeneratePosition()
 	{
 		Vector3 position;
 		float probablityKeep;
@@ -56,8 +56,7 @@ public class SpawnZone : MonoBehaviour
                 foreach (var element in lastElements)
                 {
                     probablityKeep *= Mathf.Min(1,
-                                    Mathf.Exp(-Mathf.Pow(characteristicDistance * areaExtents.magnitude / (position - element).magnitude, 2))
-                                                                    );
+                                    Mathf.Exp(-Mathf.Pow(characteristicDistance * areaExtents.magnitude / (position - element).magnitude, 2)));
                 }
             }
         } while ((Random.Range(0, 1F) > probablityKeep) || !spawnArea.OverlapPoint(position));

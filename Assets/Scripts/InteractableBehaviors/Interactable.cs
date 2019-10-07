@@ -12,7 +12,6 @@ public abstract class Interactable : MonoBehaviour
 
 	protected void ParentStart()
 	{
-
 		myCollider = gameObject.GetComponent<Collider2D>();
 		playerCollider = GameHandler.instance.player.GetComponent<Collider2D>();
 	}

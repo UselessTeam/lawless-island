@@ -16,9 +16,9 @@ MonoBehaviour:
   name: Crab Stew
   description: Grande cuisine!
   costForInspector:
-  - type: 4
+  - type: 5
     amount: 3
-  - type: 6
+  - type: 7
     amount: 2
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}

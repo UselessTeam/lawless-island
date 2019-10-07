@@ -16,10 +16,10 @@ MonoBehaviour:
   name: Metal
   description: 
   costForInspector:
-  - type: 8
+  - type: 9
     amount: 2
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}
   createdItem:
-    type: 0
-    amount: 10
+    type: 10
+    amount: 1

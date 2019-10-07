@@ -5,10 +5,15 @@ using UnityEngine;
 public class HumanHandler : Singleton<HumanHandler>
 {
     public List<GameObject> humanArray = new List<GameObject>();
+
+    public int minSpeed;
+    public int maxSpeed;
+    public int minHP;
+    public int maxHP;
+
     void Start()
     {
         //humanArray.AddRange(GetComponentsInChildren<GameObject>());
-        //NewPlayer();
     }
 
     public void SpawnHuman()
@@ -25,17 +30,36 @@ public class HumanHandler : Singleton<HumanHandler>
 
     public void NewPlayer()
     {
-        GameObject newPlayer = humanArray[RandomHuman()];
-        GameHandler.instance.player.GetComponent<PlayerBehavior>().SetNewPlayer(newPlayer);
+        int chosenOne = RandomHuman();
+        Transform newPlayer = humanArray[chosenOne].transform;
+        Transform playerTrsfm = GameHandler.instance.player.transform;
+        Transform oldPlayer = playerTrsfm.parent;
 
-        newPlayer.transform.parent = null;
-        GameHandler.instance.player.transform.SetParent(newPlayer.transform);
-        newPlayer.transform.Find("PNJ").gameObject.SetActive(false);
+        playerTrsfm.GetComponent<PlayerBehavior>().SetNewPlayer(newPlayer);
+
+        newPlayer.parent = null;
+        playerTrsfm.SetParent(newPlayer.transform);
+        newPlayer.Find("PNJ").gameObject.SetActive(false);
+        humanArray.RemoveAt(chosenOne);
+
+        oldPlayer.parent = transform;
+        oldPlayer.Find("PNJ").gameObject.SetActive(true);
+        humanArray.Add(oldPlayer.gameObject);
+
+        playerTrsfm.GetComponent<PlayerMovement>().MoveNewHuman();
+        playerTrsfm.localPosition = Vector3.zero;
     }
 
     public int RandomHuman()
     {
         return Random.Range(0, InventoryHandler.instance.GetQuantity(ItemType.Human));
+    }
+
+    private void Update()
+    {/*
+        if (Input.GetButtonDown("Cancel"))
+            NewPlayer(); */
+
     }
 
 }

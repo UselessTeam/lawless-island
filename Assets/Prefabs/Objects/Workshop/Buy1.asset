@@ -16,12 +16,12 @@ MonoBehaviour:
   name: Harpoon
   description: 
   costForInspector:
-  - type: 1
-    amount: 4
   - type: 2
+    amount: 2
+  - type: 3
     amount: 2
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}
   createdItem:
-    type: 11
+    type: 16
     amount: 1

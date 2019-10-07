@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Buy4
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  name: Torch
-  description: To light up your lonely nights
+  name: Axe
+  description: Lets chop some wood
   costForInspector:
-  - type: 1
-    amount: 2
   - type: 2
+    amount: 2
+  - type: 3
     amount: 3
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}
   createdItem:
-    type: 11
+    type: 15
     amount: 1

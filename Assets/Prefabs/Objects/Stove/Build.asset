@@ -16,9 +16,9 @@ MonoBehaviour:
   name: Stove
   description: Fire is at the base of any good civilization
   costForInspector:
-  - type: 2
+  - type: 3
     amount: 6
-  - type: 7
+  - type: 8
     amount: 4
   onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
     type: 3}

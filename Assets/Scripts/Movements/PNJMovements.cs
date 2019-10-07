@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class PNJMovements : MonoBehaviour
 {
-    public float movementSpeed = 15;
+    float movementSpeed;
+    public float movementRate = 3;
+
+    float timeSinceLastMove = 0;
+    Vector3 goingTo;
+    Vector3 direction;
 
     MovingEntity movingEntity;
 
     // Start is called before the first frame update
     void Start()
     {
+        movementSpeed = Random.Range(HumanHandler.instance.minSpeed, HumanHandler.instance.maxSpeed);
+
         movingEntity = GetComponentInParent<MovingEntity>();
         movingEntity.speed = movementSpeed;
     }
@@ -18,6 +25,14 @@ public class PNJMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        movingEntity.SetDirection(direction);
+        if (movementRate > 0 && Time.fixedTime - timeSinceLastMove > 60 / movementRate)
+        {
+            goingTo = HumanHandler.instance.GetComponent<SpawnZone>().GeneratePosition();
+            direction = (goingTo - transform.parent.position).normalized;
+            timeSinceLastMove = Time.fixedTime;
+        }
+        if (Vector3.Dot((goingTo - transform.parent.position), direction) <= 0)
+            direction = Vector3.zero;
     }
 }

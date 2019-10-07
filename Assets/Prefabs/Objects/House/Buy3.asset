@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Buy3
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  name: Torch
-  description: To light up your lonely nights
+  name: Spend the night
+  description: Get yourself some well deserved sleep
   costForInspector:
   - type: 0
     amount: 5

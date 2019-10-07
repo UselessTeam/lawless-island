@@ -56,7 +56,7 @@ public class PlayerBehavior : FightingBehavior
 		Destroy(gameObject);
 	}
 
-    public void SetNewPlayer(GameObject newPlayer)
+    public void SetNewPlayer(Transform newPlayer)
     {
         FightingBehavior newFightStats = newPlayer.GetComponentInChildren<FightingBehavior>();
         hpMax = newFightStats.hpMax;

@@ -16,9 +16,9 @@ MonoBehaviour:
   name: Roasted mushrooms
   description: Smells good!
   costForInspector:
-  - type: 3
+  - type: 4
     amount: 2
-  - type: 1
+  - type: 2
     amount: 1
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}

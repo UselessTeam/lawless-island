@@ -16,12 +16,12 @@ MonoBehaviour:
   name: Sword
   description: 
   costForInspector:
-  - type: 1
-    amount: 2
-  - type: 9
+  - type: 2
+    amount: 1
+  - type: 10
     amount: 4
   onSelected: {fileID: 5027025787511082584, guid: 65ae8deb742238d4c9185315c822112c,
     type: 3}
   createdItem:
-    type: 7
+    type: 18
     amount: 1

@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Build a Workshop
   description: Make more advanced tools
   costForInspector:
-  - type: 7
+  - type: 8
     amount: 8
   onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
     type: 3}

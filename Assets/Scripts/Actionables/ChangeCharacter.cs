@@ -6,6 +6,6 @@ public class ChangeCharacter : IActionable
 {
     public override void Activate(SelectableOption option)
     {
-
+        HumanHandler.instance.NewPlayer();
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Build a Firecamp
   description: Fire is at the base of any good civilization
   costForInspector:
-  - type: 0
+  - type: 2
     amount: 6
   onSelected: {fileID: 6123954017068815131, guid: c2c45754ea91be441a8200bb5d12e8dc,
     type: 3}
