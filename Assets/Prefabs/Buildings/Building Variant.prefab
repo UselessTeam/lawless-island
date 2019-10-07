@@ -10,8 +10,43 @@ PrefabInstance:
     - target: {fileID: 4648648147304231807, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_Name
-      value: Building
+      value: Building Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b94aed89dc3abd48b4521423ffabb38,
+        type: 2}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: buildingRequirement
+      value: 
+      objectReference: {fileID: 11400000, guid: f4426faaf9c57854db8cab8556e05116,
+        type: 2}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 83528bfe427eb524aa1df234948488d1,
+        type: 2}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 972ff6c65ba7fac43bb78576c7bf02aa,
+        type: 2}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 972ff6c65ba7fac43bb78576c7bf02aa,
+        type: 2}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,36 +102,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
-        type: 3}
-      propertyPath: transactions.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1b94aed89dc3abd48b4521423ffabb38,
-        type: 2}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
-        type: 3}
-      propertyPath: buildingRequirement
-      value: 
-      objectReference: {fileID: 11400000, guid: f4426faaf9c57854db8cab8556e05116,
-        type: 2}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
-        type: 3}
-      propertyPath: transactions.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 83528bfe427eb524aa1df234948488d1,
-        type: 2}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
-        type: 3}
-      propertyPath: transactions.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 972ff6c65ba7fac43bb78576c7bf02aa,
-        type: 2}
-    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
-        type: 3}
-      propertyPath: transactions.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: c82fafdad589ca542a6e515ed6f7f046,
-        type: 2}
     - target: {fileID: 1367354019631913130, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_Sprite

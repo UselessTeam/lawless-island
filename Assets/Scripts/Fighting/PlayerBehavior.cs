@@ -53,8 +53,19 @@ public class PlayerBehavior : FightingBehavior
 
 	public override void Die()
 	{
-		Destroy(gameObject);
-	}
+        if (InventoryHandler.instance.IsEnough(ItemType.Human, 2))
+        {
+            InventoryHandler.instance.Remove(ItemType.Human, 1);
+            GameObject toDestroy = transform.parent.gameObject;
+            HumanHandler.instance.NewPlayer();
+            Destroy(transform.parent.gameObject);
+        }
+        else
+        {
+            //TODO GAMEOVER
+            Destroy(transform.parent.gameObject);
+        }
+    }
 
     public void SetNewPlayer(Transform newPlayer)
     {

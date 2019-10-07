@@ -21,7 +21,8 @@ public class RamassableBehavior : Interactable
     {
         if (isRequirement)
         {
-            if (!InventoryHandler.instance.IsEnough(requirement, 1))
+            if (!(InventoryHandler.instance.IsEnough(requirement, 1)
+                && GameHandler.instance.selectedTool == GameHandler.instance.tools.FindIndex(d => d == requirement)))
             {
                 windowRenderer.color = Color.red;
             }
@@ -41,7 +42,8 @@ public class RamassableBehavior : Interactable
 
     protected override void Interact()
     {
-        if (!isRequirement || InventoryHandler.instance.IsEnough(requirement, 1))
+        if (!isRequirement ||
+        (InventoryHandler.instance.IsEnough(requirement, 1) && GameHandler.instance.selectedTool == GameHandler.instance.tools.FindIndex(d => d == requirement)))
         {
             InventoryHandler.instance.Add(item, amount);
             Destroy(gameObject);
