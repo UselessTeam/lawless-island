@@ -8,6 +8,7 @@ public abstract class FightingBehavior : MonoBehaviour
     protected int hp;
     public int getHP{ get { return hp; } }
     public int damage = 7;
+    public int armor = 0;
     // Start is called before the first frame update
 
     protected virtual void Start()
