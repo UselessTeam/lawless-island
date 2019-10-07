@@ -82,9 +82,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 20
   damage: 10
+  armor: 0
   attackObject: {fileID: 42955728193229358}
   attackTime: 0.1
   attackPopDistance: 1
+  equipementDamage: 140000000a000000050000000400000002000000
 --- !u!1 &42955728193229358
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 20
   damage: 0
+  armor: 0
 --- !u!1 &2777511922579871367
 GameObject:
   m_ObjectHideFlags: 0
