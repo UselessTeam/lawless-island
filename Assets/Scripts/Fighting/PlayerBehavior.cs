@@ -74,7 +74,7 @@ public class PlayerBehavior : FightingBehavior
             InventoryHandler.instance.Remove(ItemType.Human, 1);
             GameObject toDestroy = transform.parent.gameObject;
             HumanHandler.instance.NewPlayer();
-            Destroy(transform.parent.gameObject);
+            Destroy(toDestroy);
         }
         else
         {

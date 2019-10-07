@@ -33,7 +33,10 @@ public class PNJMovements : MonoBehaviour
         if (movementRate > 0 && Time.fixedTime - timeSinceLastMove > 60 / movementRate + randTime)
         {
             randTime = Random.Range(-20 / movementRate, 20 / movementRate);
-            goingTo = HumanHandler.instance.GetComponent<SpawnZone>().GeneratePosition();
+            goingTo = GetComponentInParent<SpawnZone>().GeneratePosition();
+            SpawnZone a = GetComponentInParent<SpawnZone>();
+            if (a == null)
+                Debug.Log("probl");
             direction = (goingTo - transform.parent.position).normalized;
             timeSinceLastMove = Time.fixedTime;
         }

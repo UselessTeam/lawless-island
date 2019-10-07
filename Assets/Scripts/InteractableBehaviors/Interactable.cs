@@ -18,7 +18,10 @@ public abstract class Interactable : MonoBehaviour
 
 	protected void ParentUpdate()
 	{
-		if (!GameHandler.instance.isInteractionPaused)
+        if(playerCollider == null)
+            playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
+
+        if (!GameHandler.instance.isInteractionPaused)
 		{
 			if (!isTouching && myCollider.IsTouching(playerCollider))
             {

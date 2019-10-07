@@ -31,7 +31,9 @@ public class EnnemiBehavior : FightingBehavior
 
 	// Update is called once per frame
 	void Update()
-	{
+    {
+        if (playerCollider == null)
+            playerCollider = GameHandler.instance.player.GetComponentInParent<Collider2D>();
 		FightingUpdate();
 		Vector2 toPlayer = (Vector2)(playerTransform.position - transform.position);
 		if (toPlayer.magnitude < VisionRange)
