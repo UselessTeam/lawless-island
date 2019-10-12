@@ -22,7 +22,7 @@ public enum ItemType {
     Herb,
     Coal,
     Shadow,
-    Torch,
+    Torcj,
     Axe,
     Harpoon,
     Pickaxe,

@@ -8,7 +8,7 @@ public class GameHandler : Singleton<GameHandler>
     public GameObject player;
 
     public int selectedTool = 0;
-    public List<ItemType> tools;
+    public ItemType[] tools;
 
     public bool guiOpen = false;
     public bool isPhysicsPaused
@@ -37,10 +37,7 @@ public class GameHandler : Singleton<GameHandler>
     private void Start()
     {
         SoundHandler.instance.PlayMusic("bornForAdventure");
-        tools.Add(ItemType.Sword);
-        tools.Add(ItemType.Harpoon);
-        tools.Add(ItemType.Axe);
-        tools.Add( ItemType.Pickaxe);
+        tools = new ItemType[] { ItemType.Sword, ItemType.Harpoon, ItemType.Axe, ItemType.Pickaxe };
     }
     void Update()
     {
@@ -54,6 +51,7 @@ public class GameHandler : Singleton<GameHandler>
             {
                 selectedTool = i;
                 GUIHandler.instance.SelectTool(i);
+                player.GetComponent<PlayerBehavior>().UpdateDamage();
             }
         }
     }

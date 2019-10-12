@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowEssence
       objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: ButtonWindow
+      value: 
+      objectReference: {fileID: 305366093802998698}
+    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: item
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2966094848473172738, guid: 0b08b500268b3f64889de2e240a01085,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,6 +77,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2966094849604837083, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6915937554193068218, guid: 0b08b500268b3f64889de2e240a01085,
         type: 3}
       propertyPath: m_Sprite
@@ -75,3 +90,9 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b08b500268b3f64889de2e240a01085, type: 3}
+--- !u!1 &305366093802998698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2966094849604837083, guid: 0b08b500268b3f64889de2e240a01085,
+    type: 3}
+  m_PrefabInstance: {fileID: 3248589931959571825}
+  m_PrefabAsset: {fileID: 0}

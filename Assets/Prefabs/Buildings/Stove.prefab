@@ -10,17 +10,17 @@ PrefabInstance:
     - target: {fileID: 4648648147304231807, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_Name
-      value: Building Variant
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.01
       objectReference: {fileID: 0}
     - target: {fileID: 4648648147304231803, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
         type: 3}
@@ -66,6 +66,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648648147304231801, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: transactions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013224309377403951, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0011444092
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013224309377403951, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.22670007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013224309377403951, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.1346984
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013224309377403951, guid: 35bc628f71cc8a7479b65dbd58da8cc0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1939301
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bc628f71cc8a7479b65dbd58da8cc0, type: 3}

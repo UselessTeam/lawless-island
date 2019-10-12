@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   name: Harpoon
-  description: 
+  description: Quench your blood thirst!
   costForInspector:
   - type: 2
     amount: 2

@@ -98,8 +98,8 @@ GameObject:
   m_Component:
   - component: {fileID: 42955728193229357}
   - component: {fileID: 42955728193229779}
-  - component: {fileID: 42955728193229356}
   - component: {fileID: 5787024220444630675}
+  - component: {fileID: 1850963932930099515}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -171,8 +171,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &42955728193229356
-BoxCollider2D:
+--- !u!95 &5787024220444630675
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42955728193229358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04acc96fc4af0f0b8883d521c77dd05a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1850963932930099515
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -194,28 +213,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.13}
-  m_EdgeRadius: 0
---- !u!95 &5787024220444630675
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42955728193229358}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04acc96fc4af0f0b8883d521c77dd05a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.375, y: 0.5625}
+      - {x: -0.4375, y: 0.5625}
+      - {x: -0.4375, y: -0.5625}
+      - {x: -0.125, y: -0.5625}
+      - {x: 0.375, y: -0.5}
+      - {x: 0.75, y: -0.25}
+      - {x: 0.75, y: 0.1875}
+      - {x: 0.6875, y: 0.375}
 --- !u!1 &761063042320494733
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172764, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172764, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.9273693
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: item
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
+        type: 3}
+      propertyPath: isRequirement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2966094848473172738, guid: 0b08b500268b3f64889de2e240a01085,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -65,16 +85,6 @@ PrefabInstance:
     - target: {fileID: 2966094848473172738, guid: 0b08b500268b3f64889de2e240a01085,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
-        type: 3}
-      propertyPath: item
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2966094848473172766, guid: 0b08b500268b3f64889de2e240a01085,
-        type: 3}
-      propertyPath: isRequirement
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6915937554193068218, guid: 0b08b500268b3f64889de2e240a01085,

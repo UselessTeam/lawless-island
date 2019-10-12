@@ -8,5 +8,6 @@ public class BuyItem : IActionable
 	public override void Activate(SelectableOption option)
 	{
         InventoryHandler.instance.Add(option.createdItem);
+        GameHandler.instance.player.GetComponent<PlayerBehavior>().UpdateDamage();
     }
 }

@@ -18,7 +18,7 @@ namespace Graphics.GUI
             ItemType.Shadow,
             ItemType.Stick,
             ItemType.Stone,
-            ItemType.Torch,
+            ItemType.Torcj,
             ItemType.Wood
         };
         private readonly static ItemType[] TOOLS_ITEM_TYPES = new ItemType[4] {
